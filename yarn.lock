@@ -1143,10 +1143,8 @@
   dependencies:
     "@lezer/common" "^0.15.0"
 
-"@maximeheckel/design-system@^1.1.1":
+"@maximeheckel/design-system@file:../design-system":
   version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@maximeheckel/design-system/-/design-system-1.1.1.tgz#0612847ab8c31d325b71070db11f9802d5ed714c"
-  integrity sha512-1nKNrE2o4TwjuE/4UWtjiI8OCGVPn/pnuJTnUgsc4wvcNSTGFlgXRQbtOP8DChF+f93xPcbWG8n/FLMYLl2PMQ==
   dependencies:
     "@radix-ui/react-tooltip" "1.0.0"
     "@stitches/react" "^1.2.7"
