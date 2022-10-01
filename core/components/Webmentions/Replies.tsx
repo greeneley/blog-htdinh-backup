@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 import { styled } from '@maximeheckel/design-system';
 import { RepliesProps, Reply } from './types';
+import Image from 'next/image';
 
 const RepliesList = styled(motion.ul, {
   display: 'flex',
@@ -78,7 +79,7 @@ const Replies = ({ replies }: RepliesProps) => {
                   href={link.data.author.url}
                   style={{ flexShrink: 0, cursor: 'pointer' }}
                 >
-                  <img
+                  <Image
                     height={50}
                     width={50}
                     src={link.data.author.photo}

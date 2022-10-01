@@ -120,7 +120,7 @@ const Sandpack = (props: SandpackProps) => {
   const editorPart = props.options?.editorWidthPercentage || 50;
   const previewPart = 100 - editorPart;
 
-  const defaultFilesByTemplate: Record<SandpackPredefinedTemplate, any> = {
+  const defaultFilesByTemplate: Record<any, any> = {
     react: setupFiles,
     // TODO
     'react-ts': '',
