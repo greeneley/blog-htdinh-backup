@@ -17,7 +17,7 @@ import {
 } from '@maximeheckel/design-system';
 import { format } from 'date-fns';
 import { motion, MotionProps } from 'framer-motion';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
