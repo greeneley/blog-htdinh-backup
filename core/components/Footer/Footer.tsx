@@ -118,8 +118,8 @@ const Footer = () => (
             variant="primary"
             weight="3"
           >
-            © {new Date().getFullYear()} Maxime Heckel ——{' '}
-            <EM size="1">New York</EM>
+            © {new Date().getFullYear()} Dinh Thanh Hai ——{' '}
+            <EM size="2">Viet Nam</EM>
           </Text>
           <Logo alt="Maxime Heckel's logo" size={35} />
         </FooterContent>
