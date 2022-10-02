@@ -23,9 +23,9 @@ import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
 
-const NewsletterForm = dynamic(
-  () => import('@theme/components/NewsletterForm')
-);
+// const NewsletterForm = dynamic(
+//   () => import('@theme/components/NewsletterForm')
+// );
 
 interface Props {
   posts: Post[];
@@ -89,7 +89,8 @@ const IndexPage = (props: Props) => {
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
-            Hi <WavingHand /> I'm Dinh, and this is my blog.{' '}
+            Xin chào ! Hi ! Bonjour <WavingHand /> I'm Dinh, and this is my
+            blog.{' '}
             <Text variant="secondary" size="7" weight="4">
               Here, I share through my writing my experience as a frontend
               engineer and everything I'm learning about on React, Typescript,
@@ -126,10 +127,10 @@ const IndexPage = (props: Props) => {
             </a>
           </Flex>
         </Box>
-        <section>
-          <H2>Newsletter</H2>
-          <NewsletterForm large />
-        </section>
+        {/*<section>*/}
+        {/*  <H2>Newsletter</H2>*/}
+        {/*  <NewsletterForm large />*/}
+        {/*</section>*/}
         <section>
           <H2>Featured</H2>
           <Grid
