@@ -70,10 +70,10 @@
     "rss": "1.2.2",
     "unist-util-find-after": "3.0.0",
     "unist-util-visit": "2.0.3",
-    "unist-util-visit-parents": "3.1.1"
+    "unist-util-visit-parents": "3.1.1",
+    "@maximeheckel/design-system": "^1.1.1"
   },
   "devDependencies": {
-    "@maximeheckel/design-system": "^1.1.1",
     "@babel/core": "7.12.10",
     "@netlify/plugin-nextjs": "4.2.2",
     "@next/bundle-analyzer": "10.0.5",
