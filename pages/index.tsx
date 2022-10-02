@@ -2,6 +2,7 @@
 import {
   css,
   styled,
+  Anchor,
   Box,
   Button,
   Card,
@@ -16,10 +17,15 @@ import {
 } from '@maximeheckel/design-system';
 import { format } from 'date-fns';
 import { motion, MotionProps } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
+
+const NewsletterForm = dynamic(
+  () => import('@theme/components/NewsletterForm')
+);
 
 interface Props {
   posts: Post[];
@@ -111,11 +117,19 @@ const IndexPage = (props: Props) => {
               tabIndex={-1}
             >
               <Button variant="secondary" endIcon={<Icon.Twitter />}>
-                @htdinh
+                @MaximeHeckel
               </Button>
+              <VisuallyHidden as="p">
+                Link redirects to my Twitter profile page
+                https://twitter.com/MaximeHeckel.
+              </VisuallyHidden>
             </a>
           </Flex>
         </Box>
+        <section>
+          <H2>Newsletter</H2>
+          <NewsletterForm large />
+        </section>
         <section>
           <H2>Featured</H2>
           <Grid
@@ -129,8 +143,8 @@ const IndexPage = (props: Props) => {
             gapY={4}
           >
             {posts
-              .filter((post: Post) => post.featured)
-              .map((post: Post) => {
+              .filter((post) => post.featured)
+              .map((post) => {
                 return (
                   <motion.li
                     style={{
@@ -288,20 +302,15 @@ const IndexPage = (props: Props) => {
             })}
           </Grid>
           <br />
-          {/*<Card>*/}
-          {/*  <Card.Body>*/}
-          {/*    <H3>#BlackLivesMatter</H3>*/}
-          {/*    <Anchor underline href="https://blacklivesmatters.carrd.co/">*/}
-          {/*      Click here to find out how you can help.*/}
-          {/*    </Anchor>*/}
-          {/*  </Card.Body>*/}
-          {/*</Card>*/}
+          <Card>
+            <Card.Body>
+              <H3>#BlackLivesMatter</H3>
+              <Anchor underline href="https://blacklivesmatters.carrd.co/">
+                Click here to find out how you can help.
+              </Anchor>
+            </Card.Body>
+          </Card>
         </section>
-
-        {/*<section>*/}
-        {/*  <H2>Newsletter</H2>*/}
-        {/*  <NewsletterForm large />*/}
-        {/*</section>*/}
       </Grid>
     </Layout>
   );

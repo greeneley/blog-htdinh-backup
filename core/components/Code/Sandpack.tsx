@@ -7,7 +7,6 @@ import {
 } from '@codesandbox/sandpack-react';
 import { Shadows, styled } from '@maximeheckel/design-system';
 import setupFiles from './SandpackSetupFiles';
-
 // Default Theme
 const theme = {
   colors: {
