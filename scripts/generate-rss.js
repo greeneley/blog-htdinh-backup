@@ -41,7 +41,7 @@ const matter = require('gray-matter');
 
   try {
     const feed = new RSS({
-      title: "Maxime Heckel's Blog",
+      title: "Dinh's Blog",
       description:
         "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
       site_url: 'https://blog.maximeheckel.com',

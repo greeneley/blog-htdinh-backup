@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title><![CDATA[Maxime Heckel's Blog]]></title>
+        <title><![CDATA[Dinh's Blog]]></title>
         <description><![CDATA[Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.]]></description>
         <link>https://blog.maximeheckel.com</link>
         <image>
             <url>https://blog.maximeheckel.com/static/og/main-og-image.png</url>
-            <title>Maxime Heckel&apos;s Blog</title>
+            <title>Dinh&apos;s Blog</title>
             <link>https://blog.maximeheckel.com</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Tue, 09 Aug 2022 01:52:31 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 06 Oct 2022 11:20:45 GMT</lastBuildDate>
         <atom:link href="https://blog.maximeheckel.com/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
