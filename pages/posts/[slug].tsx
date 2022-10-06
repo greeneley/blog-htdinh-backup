@@ -72,8 +72,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     });
     return { props: { post, ogImage, tweets } };
   } catch (error) {
-    // eslint-disable-next-line
-    console.log(error);
     return { notFound: true };
   }
 };

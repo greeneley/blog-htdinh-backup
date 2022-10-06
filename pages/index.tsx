@@ -89,8 +89,7 @@ const IndexPage = (props: Props) => {
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
-            Xin chào ! Hi ! Bonjour <WavingHand /> I'm Dinh, and this is my
-            blog.{' '}
+            Xin chào! Hi ! Bonjour <WavingHand /> I'm Dinh, and this is my blog.{' '}
             <Text variant="secondary" size="7" weight="4">
               Here, I share through my writing my experience as a frontend
               engineer and everything I'm learning about on React, Typescript,
@@ -218,7 +217,7 @@ const IndexPage = (props: Props) => {
                                 backgroundImage: post.colorFeatured!,
                               }}
                             >
-                              {post.title}
+                              {/*{post.title}*/}
                             </H3>
                             <Text as="p" css={{ marginBottom: '0px' }}>
                               {post.subtitle}
