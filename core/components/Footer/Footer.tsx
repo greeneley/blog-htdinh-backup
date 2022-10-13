@@ -121,7 +121,7 @@ const Footer = () => (
             © {new Date().getFullYear()} Dinh Thanh Hai ——{' '}
             <EM size="2">Viet Nam</EM>
           </Text>
-          <Logo alt="Maxime Heckel's logo" size={35} />
+          <Logo alt="Maxime Heckel's logo" size={120} />
         </FooterContent>
       </FooterWrapper>
     </Grid>
