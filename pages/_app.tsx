@@ -20,6 +20,7 @@ const App = ({ Component, pageProps }: AppProps) => {
           name="google-site-verification"
           content="f11boUvGIzjbYwQVuaCieN-J4vcA_BxJuO_S54WPf-U"
         />
+        <title>Hai Dinh Thanh</title>
       </Head>
       <DefaultSeo />
       <Tooltip.Provider>

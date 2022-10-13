@@ -51,7 +51,7 @@ const SnippetLayout = ({ children, frontMatter }: Props) => {
               className="p-name"
               data-testid={`project-title-${title}`}
             >
-              {title}
+              {/*{title}*/}
             </Hero.Title>
             <Hero.Info>
               <Flex justifyContent="space-between">

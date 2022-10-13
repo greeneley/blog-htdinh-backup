@@ -1,9 +1,9 @@
 {
-  "name": "blog.maximeheckel.com",
+  "name": "blog.htdinh.com",
   "private": true,
-  "description": "blog.maximeheckel.com - Blog",
+  "description": "htdinh - Blog",
   "version": "0.5.0",
-  "author": "Maxime Heckel <hello@maximeheckel.com>",
+  "author": "Dinh <haidinhthanh.vn@gmail.com>",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
     "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",

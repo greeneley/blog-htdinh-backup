@@ -95,7 +95,7 @@ const Header = (props: HeaderProps) => {
                       aria-describedby="hometooltip"
                       data-testid="header-logo"
                     >
-                      <Logo alt="Logo" size={44} />
+                      <Logo alt="Logo" size={90} />
                     </a>
                   </Link>
                 </span>
