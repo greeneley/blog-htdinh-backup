@@ -13,7 +13,6 @@ import React from 'react';
 import siteConfig from 'config/site';
 import Layout from '@theme/layout';
 import TableOfContent from '@theme/components/TableOfContent';
-import Seo from '@theme/components/Seo';
 import Hero from '@theme/components/Hero';
 import WebmentionCount from '@theme/components/Webmentions/WebmentionCount';
 import { Post, ReadingTime } from 'types/post';
@@ -62,7 +61,7 @@ const contentClass = css({
   },
 });
 
-const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
+const BlogLayout = ({ children, frontMatter }: Props) => {
   const {
     date,
     updated,
@@ -77,7 +76,7 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
 
   const headerProps = {
     title,
-    offsetHeight: 256,
+    offsetHeight: 80,
     showProgressBarOnMobile: true,
   };
 
@@ -86,10 +85,6 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
   );
 
   React.useEffect(() => {
-    /**
-     * Working around some race condition quirks :) (don't judge)
-     * TODO @MaximeHeckel: see if there's a better way through a remark plugin to do this
-     */
     setTimeout(() => {
       const titles = document.querySelectorAll('h2');
       const idArrays = Array.prototype.slice
@@ -104,18 +99,23 @@ const BlogLayout = ({ children, frontMatter, ogImage }: Props) => {
 
   return (
     <Layout footer={true} header={true} headerProps={headerProps}>
-      <Seo
-        title={title}
-        desc={subtitle}
-        image={ogImage}
-        path={path}
-        date={date}
-        updated={updated}
-      />
+      {/*<Seo*/}
+      {/*  title={title}*/}
+      {/*  desc={subtitle}*/}
+      {/*  image={ogImage}*/}
+      {/*  path={path}*/}
+      {/*  date={date}*/}
+      {/*  updated={updated}*/}
+      {/*/>*/}
       <article className="h-entry">
         <Grid columns="small" gapX={4}>
           <Hero>
-            <Box css={{ marginBottom: '24px', fontSize: 'var(--font-size-2)' }}>
+            <Box
+              css={{
+                marginBottom: '24px',
+                fontSize: 'var(--font-size-2)',
+              }}
+            >
               <Link href="/" passHref>
                 <Anchor arrow="left" data-testid="home-link" discreet>
                   Home

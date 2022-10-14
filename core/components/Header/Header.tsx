@@ -72,7 +72,7 @@ const Header = (props: HeaderProps) => {
 
       <HeaderWrapper
         initial="open"
-        animate={reached ? 'collapsed' : 'open'}
+        animate={'collapsed'}
         variants={headerVariants}
         css={{
           borderColor: reached
