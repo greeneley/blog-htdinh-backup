@@ -25,7 +25,6 @@ import { HeaderProps } from './types';
 const CommandCenterButton = dynamic(
   () => import('../Buttons/CommandCenterButton')
 );
-const LightDarkSwitcher = dynamic(() => import('../Buttons/LightDarkSwitcher'));
 const Search = dynamic(() => import('../Search'));
 
 const headerVariants = {
@@ -40,7 +39,7 @@ const headerVariants = {
 };
 
 const Header = (props: HeaderProps) => {
-  const { title, offsetHeight = 120, showProgressBarOnMobile } = props;
+  const { title, offsetHeight = 80, showProgressBarOnMobile } = props;
   const [showSearch, setShowSearch] = React.useState(false);
   const reached = useScrollCounter(offsetHeight / 2);
   const readingProgress = useProgress();
@@ -107,7 +106,6 @@ const Header = (props: HeaderProps) => {
                 isSearchShown={showSearch}
                 onClick={() => setShowSearch(true)}
               />
-              <LightDarkSwitcher />
             </Flex>
           </HeaderContent>
         </Grid>

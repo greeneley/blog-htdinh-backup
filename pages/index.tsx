@@ -85,7 +85,7 @@ const IndexPage = (props: Props) => {
   const { posts } = props;
 
   return (
-    <Layout footer header headerProps={{ offsetHeight: 256 }}>
+    <Layout footer header headerProps={{ offsetHeight: 128 }}>
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
