@@ -2,7 +2,7 @@ import { css, styled, Flex } from '@maximeheckel/design-system';
 import { motion } from 'framer-motion';
 
 export const HeaderWrapper = styled(motion.header, {
-  position: 'fixed',
+  position: 'absolute',
   zIndex: 10,
   top: '0',
   backdropFilter: 'blur(8px)',
