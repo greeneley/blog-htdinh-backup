@@ -9,7 +9,7 @@
             <link>https://htdinh.netlify.app/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 26 Oct 2022 15:45:40 GMT</lastBuildDate>
+        <lastBuildDate>Wed, 26 Oct 2022 15:47:28 GMT</lastBuildDate>
         <atom:link href="https://htdinh.netlify.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
@@ -18,13 +18,6 @@
             <guid isPermaLink="false">https://htdinh.netlify.app/posts/lazy-loading-in-images-with-react-js</guid>
             <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
             <pubDate>Wed, 26 Oct 2022 03:33:00 GMT</pubDate>
-        </item>
-        <item>
-            <title><![CDATA[Khái niệm REST và các ràng buộc của nó]]></title>
-            <link>https://htdinh.netlify.app/posts/khai-niem-rest-va-cac-rang-buoc-cua-no</link>
-            <guid isPermaLink="false">https://htdinh.netlify.app/posts/khai-niem-rest-va-cac-rang-buoc-cua-no</guid>
-            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Mon, 22 Mar 2021 03:33:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Install CUDA on Ubuntu 18.04]]></title>
