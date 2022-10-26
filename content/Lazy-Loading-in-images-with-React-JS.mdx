@@ -1,0 +1,240 @@
+---
+title: 'Lazy Loading in images with React JS'
+date: '2022-10-26 11:33:00 +0800'
+updated: '2022-10-26 11:33:00 +0800'
+categories: []
+keywords:
+  [
+    python
+  ]
+slug: lazy-loading-in-images-with-react-js
+type: 'blogPost'
+featured: true
+colorFeatured: 'linear-gradient(90deg, rgba(34,26,179,1) 0%, rgba(9,121,111,1) 53%, rgba(0,212,255,1) 100%)'
+fontFeatured: '#928eda'
+---
+
+*Lazy Loading* is very important nowadays to improve the performance of your website. Performing image optimization helps your website to be faster, have better SEO and helps to improve user experience.
+This time you will learn how to lazy load images in an application with React JS.
+
+Any kind of feedback is welcome, thanks and I hope you enjoy the article
+
+## 1. What is Lazy Loading?
+Generally, when a user visits a website, all the content of the page is downloaded and displayed immediately, even though there is no guarantee that the user will consume it. As a result, there is a loss of memory and bandwidth.
+
+And this is where lazy loading appears, which is a strategy that delays the loading of some files, such as images, only until the user needs them depending on their activity and navigation in your application. Normally these files are only loaded when they are in view of the user.
+
+## 2. Benefits of Implementing Lazy Loading
+
+- Achieve an ideal balance between the content positioned on the site and the final experience, to achieve relevant value delivery.
+
+- Faster and more optimized connections, since only what is displayed is loaded.
+
+- Increased user retention by offering efficient loading and no delays.
+
+- Resource savings by using only what needs to be displayed.
+
+- Offers a differentiated experience, especially to users with slow connections.
+
+- Optimizes the use of user resources, such as battery, mobile data, time, among others.
+
+
+## 3. Technologies to be used
+
+- React JS (v 18)
+- Vite JS
+- TypeScript
+- CSS vanilla (You can find the styles in the repository at the end of this post)
+
+
+## 4. Creating the project
+
+We will name the project: lazy-img (optional, you can name it whatever you like).
+
+```
+npm init vite@latest
+```
+
+We create the project with Vite JS and select React with TypeScript.
+
+Then we run the following command to navigate to the directory just created
+
+```
+cd lazy-img
+```
+
+Then we install the dependencies
+
+```
+npm install
+```
+
+Then we open the project in a code editor (in my case VS code).
+
+```
+code .
+```
+
+## 5. Implementing Lazy Loading
+
+Nowadays, we can implement lazy loading in the simplest way, just by attaching the loading attribute with the value of lazy to our img or frame tag in HTML:
+
+```html
+<img src="image.jpg" alt="Image Alt" loading="lazy" />
+<iframe src="iframe" loading="lazy"></iframe>
+```
+
+But this does not work in all browsers. So in these cases, we will need an external package.
+
+## 6. First steps
+
+We will install: [react-lazy-load-image-component](https://www.npmjs.com/package/react-lazy-load-image-component "react-lazy-load-image-component").
+
+This popular library provides image rendering capabilities and effects that you can quickly and easily implement in your own React applications.
+
+We install the package:
+
+```
+npm i react-lazy-load-image-component
+```
+
+Nota: If you will use it with TypeScript, you have to install its type definition file:
+
+```
+npm i -D @types/react-lazy-load-image-component
+```
+Now in our src/App.tsx file we delete everything and add only a new component that renders a title.
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--XGJvSO1n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683917/lazy-img/01_pawxhj.png)
+## 7. Displaying images without implementing lazy loading
+
+First we generate a function that returns a certain number of elements in order to map those elements and display the images based on the number of elements.
+
+```javascript
+const generateArray = (items: number) => [...Array.from(Array(items).keys())];
+```
+
+Now we call the function generateArray to generate in this case 15 elements and we traverse it with the map method and render a normal image. I get the images from this page https://picsum.photos/
+
+```javascript
+const generateArray = (items: number) => [...Array.from(Array(items).keys())];
+
+const App = () => {
+  return (
+    <div>
+      <h1><span>Lazy Loading Images</span> 🖼️</h1>
+
+      <div className="container-images">
+        {
+          generateArray(15).map(i => (
+            <img
+              key={i}
+              src={`https://picsum.photos/id/${i}/500`}
+              alt={`Image Alt-${i}`}
+              className="img-lazy"
+              width={700} height={500}
+            />
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+export default App
+```
+
+With this, the 15 images would appear downwards. And for the moment we only see one on our screen.
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--Ugx9HEgw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663685387/lazy-img/04_hebxbx.png)
+We noticed something when inspecting our site's network.
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s---OJunnLH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683918/lazy-img/02_bwvcgr.png)
+
+The images all loaded correctly, even though we are only seeing a single image, and that's the problem, it increases our initial loading speed, therefore the page loads slower and the user gets bored and leaves our website!
+
+## 8. Displaying images implementing lazy loading
+
+The solution is to implement lazy loading.
+
+To do this we import the component from the package we previously installed and just change the img tag to LazyLoadImage.
+
+```javascript
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
+const generateArray = (items: number) => [...Array.from(Array(items).keys())];
+
+const App = () => {
+  return (
+    <div>
+      <h1><span>Lazy Loading Images</span> 🖼️</h1>
+
+      <div className="container-images">
+        {
+          generateArray(15).map(i => (
+            <LazyLoadImage
+              key={i}
+              src={`https://picsum.photos/id/${i}/500`}
+              alt={`Image Alt-${i}`}
+              className="img-lazy"
+              width={700} height={500}
+            />
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+export default App
+```
+
+This component also allows us to display a placeholder while the image is loading. Just add the placeholderSrc property.
+
+In addition, it also has a property to add a certain animation initially before it is loaded and removes it when the image is completely loaded, for it adds the effect property. But to use it you need to import the css of that effect.
+
+```javascript
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
+const generateArray = (items: number) => [...Array.from(Array(items).keys())];
+
+const App = () => {
+  return (
+    <div>
+      <h1><span>Lazy Loading Images</span> 🖼️</h1>
+
+      <div className="container-images">
+        {
+          generateArray(15).map(i => (
+            <LazyLoadImage
+              key={i}
+              src={`https://picsum.photos/id/${i}/500`}
+              alt={`Image Alt-${i}`}
+              className="img-lazy"
+              width={700} height={500}
+              placeholderSrc={placeholder}
+              effect='blur' // opacity | black-and-white
+            />
+          ))
+        }
+      </div>
+    </div>
+  )
+}
+export default App
+```
+
+And our website is ready.
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--MXb9yb3r--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663687449/lazy-img/lazy-image_ww4uyt.gif)
+
+And if we now look at the development tools in the network tab, we will see that the loading time of the application has been reduced by almost half, this is because only the images that are in view are loaded and as the user scrolls through the website, the other images will be loaded.
+
+![](https://res.cloudinary.com/practicaldev/image/fetch/s----7bdRi1--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683918/lazy-img/03_pvvpgb.png)
+
+## 9. Conclusion
+
+Optimizing images is a good practice that has to be implemented in your websites, to create a better experience for the user and also thinking about mobile devices.
+
+I hope you liked this post and that it has helped you to understand and put into practice this Lazy Loading technique, with which you notice incredible changes in the performance of your app. 🤗
+
+If you know any other different or better way to perform lazy loading, feel free to leave it in the comments 🙌.
+
+

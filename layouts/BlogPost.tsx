@@ -1,7 +1,7 @@
 import {
-  css,
   Anchor,
   Box,
+  css,
   Flex,
   Grid,
   Pill,
@@ -16,30 +16,6 @@ import TableOfContent from '@theme/components/TableOfContent';
 import Hero from '@theme/components/Hero';
 import WebmentionCount from '@theme/components/Webmentions/WebmentionCount';
 import { Post, ReadingTime } from 'types/post';
-import Signature from './Signature';
-
-interface WebmentionBlogDataProps {
-  date: string;
-  postUrl: string;
-  subtitle?: string;
-}
-
-const WebmentionBlogData = (props: WebmentionBlogDataProps) => {
-  const { date, postUrl, subtitle } = props;
-  return (
-    <>
-      <time
-        className="hidden dt-published"
-        itemProp="datepublished"
-        dateTime={date}
-      >
-        {new Date(date).toISOString().replace('Z', '') + '+01:00'}
-      </time>
-      <a className="hidden u-url" href={postUrl} />
-      {subtitle && <p className="hidden p-summary e-content">{subtitle}</p>}
-    </>
-  );
-};
 
 interface Props {
   children: React.ReactNode;
@@ -62,15 +38,7 @@ const contentClass = css({
 });
 
 const BlogLayout = ({ children, frontMatter }: Props) => {
-  const {
-    date,
-    updated,
-    slug,
-    subtitle,
-    title,
-    readingTime,
-    cover,
-  } = frontMatter;
+  const { date, updated, slug, title, readingTime, cover } = frontMatter;
   const path = `/posts/${slug}/`;
   const postUrl = `${siteConfig.url}${path}`;
 
@@ -163,8 +131,6 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
           <TableOfContent ids={ids} />
           <Box className={contentClass()}>{children}</Box>
         </Grid>
-        <Signature title={title} url={postUrl} />
-        <WebmentionBlogData date={date} postUrl={postUrl} subtitle={subtitle} />
       </article>
     </Layout>
   );

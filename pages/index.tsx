@@ -1,31 +1,25 @@
 /* eslint-disable react/no-unescaped-entities */
 import {
-  css,
-  styled,
-  Anchor,
   Box,
   Button,
   Card,
+  css,
   Flex,
   Grid,
-  Icon,
-  Text,
-  VisuallyHidden,
   H1,
   H2,
   H3,
+  Icon,
+  styled,
+  Text,
+  VisuallyHidden,
 } from '@maximeheckel/design-system';
 import { format } from 'date-fns';
 import { motion, MotionProps } from 'framer-motion';
-// import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import Layout from '@theme/layout';
 import { getAllFilesFrontMatter } from 'lib/mdx';
 import { Post, PostType } from 'types/post';
-
-// const NewsletterForm = dynamic(
-//   () => import('@theme/components/NewsletterForm')
-// );
 
 interface Props {
   posts: Post[];
@@ -200,7 +194,7 @@ const IndexPage = (props: Props) => {
                                 backgroundImage: post.colorFeatured!,
                               }}
                             >
-                              {/*{post.title}*/}
+                              {post.title}
                             </H3>
                             <Text as="p" css={{ marginBottom: '0px' }}>
                               {post.subtitle}
@@ -285,14 +279,6 @@ const IndexPage = (props: Props) => {
             })}
           </Grid>
           <br />
-          <Card>
-            <Card.Body>
-              <H3>#BlackLivesMatter</H3>
-              <Anchor underline href="https://blacklivesmatters.carrd.co/">
-                Click here to find out how you can help.
-              </Anchor>
-            </Card.Body>
-          </Card>
         </section>
       </Grid>
     </Layout>
@@ -301,7 +287,6 @@ const IndexPage = (props: Props) => {
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter(PostType.BLOGPOST);
-
   return { props: { posts } };
 }
 

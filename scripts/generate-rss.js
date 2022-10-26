@@ -43,10 +43,10 @@ const matter = require('gray-matter');
     const feed = new RSS({
       title: "Dinh's Blog",
       description:
-        "Hi I'm Maxime, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
-      site_url: 'https://blog.maximeheckel.com',
-      feed_url: 'https://blog.maximeheckel.com/rss.xml',
-      image_url: 'https://blog.maximeheckel.com/static/og/main-og-image.png',
+        "Xin chào! Hi ! Bonjour I'm Dinh, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, Python, Devops, and testing.",
+      site_url: 'https://htdinh.netlify.app/',
+      feed_url: 'https://htdinh.netlify.app/rss.xml',
+      image_url: 'https://htdinh.netlify.app/static/og/main-og-image.png',
       language: 'en',
     });
 
@@ -56,7 +56,7 @@ const matter = require('gray-matter');
     ].sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
 
     content.forEach((post) => {
-      const url = `https://blog.maximeheckel.com/${
+      const url = `https://htdinh.netlify.app/${
         post.type === 'snippet' ? 'snippets' : 'posts'
       }/${post.slug}`;
 

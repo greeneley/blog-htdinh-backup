@@ -7,9 +7,11 @@ import ProgressBar from './ProgressBar';
 
 const Wrapper = styled('div', {
   position: 'fixed',
-  top: '266px',
+  top: '120px',
   display: 'flex',
   left: '30px',
+  minHeight: '100%',
+  alignItems: 'center',
 
   ul: {
     maxWidth: '200px',
@@ -79,7 +81,7 @@ const TableOfContent = ({ ids }: TableOfContentProps) => {
    * of the page scrolled.
    */
   const shouldShowTableOfContent =
-    readingProgress > 0.07 && readingProgress < 0.95;
+    readingProgress > 0 && readingProgress < 0.95;
 
   /**
    * Variants handling hidding/showing the table of content
