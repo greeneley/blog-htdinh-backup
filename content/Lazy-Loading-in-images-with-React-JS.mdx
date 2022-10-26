@@ -104,8 +104,7 @@ Nota: If you will use it with TypeScript, you have to install its type definitio
 npm i -D @types/react-lazy-load-image-component
 ```
 Now in our src/App.tsx file we delete everything and add only a new component that renders a title.
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--XGJvSO1n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683917/lazy-img/01_pawxhj.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--XGJvSO1n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683917/lazy-img/01_pawxhj.png)
-
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--XGJvSO1n--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683917/lazy-img/01_pawxhj.png)
 ## 7. Displaying images without implementing lazy loading
 
 First we generate a function that returns a certain number of elements in order to map those elements and display the images based on the number of elements.
@@ -145,11 +144,10 @@ export default App
 
 With this, the 15 images would appear downwards. And for the moment we only see one on our screen.
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s--Ugx9HEgw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663685387/lazy-img/04_hebxbx.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--Ugx9HEgw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663685387/lazy-img/04_hebxbx.png)
-
+![](https://res.cloudinary.com/practicaldev/image/fetch/s--Ugx9HEgw--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663685387/lazy-img/04_hebxbx.png)
 We noticed something when inspecting our site's network.
 
-[![](https://res.cloudinary.com/practicaldev/image/fetch/s---OJunnLH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683918/lazy-img/02_bwvcgr.png)](https://res.cloudinary.com/practicaldev/image/fetch/s---OJunnLH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683918/lazy-img/02_bwvcgr.png)
+![](https://res.cloudinary.com/practicaldev/image/fetch/s---OJunnLH--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://res.cloudinary.com/dnxchppfm/image/upload/v1663683918/lazy-img/02_bwvcgr.png)
 
 The images all loaded correctly, even though we are only seeing a single image, and that's the problem, it increases our initial loading speed, therefore the page loads slower and the user gets bored and leaves our website!
 
