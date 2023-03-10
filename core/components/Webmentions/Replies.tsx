@@ -16,7 +16,6 @@ const Head = styled(motion.li, {
   listStyle: 'none',
   marginRight: '-10px',
   marginBottom: 'calc(1.45rem / 2)',
-
   img: {
     borderRadius: '50%',
     border: '3px solid var(--maximeheckel-colors-brand)',
