@@ -90,7 +90,7 @@ const Header = (props: HeaderProps) => {
               </Tooltip>
               {title ? <HeaderTitle text={title} /> : null}
             </Flex>
-            <Flex gap={4}>
+            <Flex gap={3}>
               <CommandCenterButton
                 isSearchShown={showSearch}
                 onClick={() => setShowSearch(true)}
