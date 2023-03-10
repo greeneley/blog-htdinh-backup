@@ -29,6 +29,8 @@
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^1.2.2",
+    "@maximeheckel/design-system": "^1.1.1",
+    "@nextui-org/react": "^1.0.0-beta.12",
     "@visx/clip-path": "1.6.1",
     "@visx/curve": "1.6.1",
     "@visx/drag": "2.1.2",
@@ -70,8 +72,7 @@
     "rss": "1.2.2",
     "unist-util-find-after": "3.0.0",
     "unist-util-visit": "2.0.3",
-    "unist-util-visit-parents": "3.1.1",
-    "@maximeheckel/design-system": "^1.1.1"
+    "unist-util-visit-parents": "3.1.1"
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
