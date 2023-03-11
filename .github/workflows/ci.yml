@@ -159,13 +159,11 @@ jobs:
           name: build-output
           path: .next
           retention-days: 1
-  e2e-tests-chrome:
+  .e2e-tests-chrome:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [16]
-    rules:
-      - when: never
     needs: build
     steps:
       - name: Checkout Commit
@@ -202,13 +200,11 @@ jobs:
           browser: chrome
           headless: true
           install: false
-  e2e-tests-firefox:
+  .e2e-tests-firefox:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node: [16]
-    rules:
-      - when: never
     needs: build
     steps:
       - name: Checkout Commit
