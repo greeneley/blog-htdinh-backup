@@ -159,7 +159,8 @@ jobs:
           name: build-output
           path: .next
           retention-days: 1
-  .e2e-tests-chrome:
+  e2e-tests-chrome:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -200,7 +201,8 @@ jobs:
           browser: chrome
           headless: true
           install: false
-  .e2e-tests-firefox:
+  e2e-tests-firefox:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
