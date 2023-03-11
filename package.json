@@ -16,7 +16,7 @@
     "export": "next export",
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx}\"",
     "generate:index": "node ./scripts/generate-index",
-    "generate:og": "node ./scripts/generate-opengraph-images",
+    "generate:og": "npx playwright install && node ./scripts/generate-opengraph-images",
     "generate:rss": "node ./scripts/generate-rss",
     "generate:sitemap": "node ./scripts/generate-sitemap",
     "lint": "eslint --ext=jsx,ts,tsx .",

@@ -80,12 +80,7 @@ const IndexPage = (props: Props) => {
       <Grid columns="medium" gapX={4} gapY={12} className={wrapperGrid()}>
         <Box>
           <H1>
-            Xin chào! Hi ! Bonjour <WavingHand /> I'm Dinh, and this is my blog.{' '}
-            <Text variant="secondary" size="7" weight="4">
-              Here, I share through my writing my experience as a frontend
-              engineer and everything I'm learning about on React, Typescript,
-              Python, Devops, and testing.
-            </Text>
+            Hi ! Bonjour <WavingHand /> I'm Dinh, and this is my blog.
           </H1>
           <Flex
             gap={4}

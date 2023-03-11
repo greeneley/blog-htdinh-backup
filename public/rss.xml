@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title><![CDATA[Dinh's Blog]]></title>
-        <description><![CDATA[Xin chào! Hi ! Bonjour I'm Dinh, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, Python, Devops, and testing.]]></description>
+        <description><![CDATA[Xin chào! Hi ! Bonjour I'm Dinh, and this is my blog.]]></description>
         <link>https://htdinh.netlify.app/</link>
         <image>
             <url>https://htdinh.netlify.app/static/og/main-og-image.png</url>
@@ -9,13 +9,21 @@
             <link>https://htdinh.netlify.app/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Wed, 26 Oct 2022 16:11:26 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 11 Mar 2023 02:49:35 GMT</lastBuildDate>
         <atom:link href="https://htdinh.netlify.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
         <item>
+            <title><![CDATA[Top useful tools for Frontend]]></title>
+            <description><![CDATA[A list of the most popular tools for Frontend developer]]></description>
+            <link>https://htdinh.netlify.app/posts/tool-front-end</link>
+            <guid isPermaLink="false">https://htdinh.netlify.app/posts/tool-front-end</guid>
+            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <pubDate>Fri, 10 Mar 2023 01:00:00 GMT</pubDate>
+        </item>
+        <item>
             <title><![CDATA[Lazy Loading in images with React JS]]></title>
-            <link>https://htdinh.netlify.app/posts/lazy-loading-in-images-with-react-js</link>
-            <guid isPermaLink="false">https://htdinh.netlify.app/posts/lazy-loading-in-images-with-react-js</guid>
+            <link>https://htdinh.netlify.app/posts/Lazy-Loading-in-images-with-React-JS</link>
+            <guid isPermaLink="false">https://htdinh.netlify.app/posts/Lazy-Loading-in-images-with-React-JS</guid>
             <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
             <pubDate>Wed, 26 Oct 2022 03:33:00 GMT</pubDate>
         </item>

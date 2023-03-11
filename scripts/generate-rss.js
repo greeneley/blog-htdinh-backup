@@ -42,8 +42,7 @@ const matter = require('gray-matter');
   try {
     const feed = new RSS({
       title: "Dinh's Blog",
-      description:
-        "Xin chào! Hi ! Bonjour I'm Dinh, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, Python, Devops, and testing.",
+      description: "Xin chào! Hi ! Bonjour I'm Dinh, and this is my blog.",
       site_url: 'https://htdinh.netlify.app/',
       feed_url: 'https://htdinh.netlify.app/rss.xml',
       image_url: 'https://htdinh.netlify.app/static/og/main-og-image.png',
