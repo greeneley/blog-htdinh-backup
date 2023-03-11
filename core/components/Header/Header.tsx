@@ -22,9 +22,9 @@ import HeaderTitle from './Title';
 import { HeaderProps } from './types';
 
 // TODO Abstract these out
-const CommandCenterButton = dynamic(
-  () => import('../Buttons/CommandCenterButton')
-);
+// const CommandCenterButton = dynamic(
+//   () => import('../Buttons/CommandCenterButton')
+// );
 const Search = dynamic(() => import('../Search'));
 
 const headerVariants = {
@@ -90,12 +90,12 @@ const Header = (props: HeaderProps) => {
               </Tooltip>
               {title ? <HeaderTitle text={title} /> : null}
             </Flex>
-            <Flex gap={3}>
-              <CommandCenterButton
-                isSearchShown={showSearch}
-                onClick={() => setShowSearch(true)}
-              />
-            </Flex>
+            {/*<Flex gap={3}>*/}
+            {/*  <CommandCenterButton*/}
+            {/*    isSearchShown={showSearch}*/}
+            {/*    onClick={() => setShowSearch(true)}*/}
+            {/*  />*/}
+            {/*</Flex>*/}
           </HeaderContent>
         </Grid>
         {showProgressBarOnMobile ? (
