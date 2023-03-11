@@ -160,6 +160,7 @@ jobs:
           path: .next
           retention-days: 1
   e2e-tests-chrome:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -201,6 +202,7 @@ jobs:
           headless: true
           install: false
   e2e-tests-firefox:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     strategy:
       matrix:

@@ -12,7 +12,6 @@ import Link from 'next/link';
 import React from 'react';
 import siteConfig from 'config/site';
 import Layout from '@theme/layout';
-import TableOfContent from '@theme/components/TableOfContent';
 import Hero from '@theme/components/Hero';
 import WebmentionCount from '@theme/components/Webmentions/WebmentionCount';
 import { Post, ReadingTime } from 'types/post';
@@ -48,33 +47,8 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
     showProgressBarOnMobile: true,
   };
 
-  const [ids, setIds] = React.useState<Array<{ id: string; title: string }>>(
-    []
-  );
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      const titles = document.querySelectorAll('h2');
-      const idArrays = Array.prototype.slice
-        .call(titles)
-        .map((title) => ({ id: title.id, title: title.innerText })) as Array<{
-        id: string;
-        title: string;
-      }>;
-      setIds(idArrays);
-    }, 500);
-  }, [slug]);
-
   return (
     <Layout footer={true} header={true} headerProps={headerProps}>
-      {/*<Seo*/}
-      {/*  title={title}*/}
-      {/*  desc={subtitle}*/}
-      {/*  image={ogImage}*/}
-      {/*  path={path}*/}
-      {/*  date={date}*/}
-      {/*  updated={updated}*/}
-      {/*/>*/}
       <article className="h-entry">
         <Grid columns="small" gapX={4}>
           <Hero>
@@ -128,7 +102,6 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
             </Hero.Info>
             {cover ? <Hero.Img className="u-photo" src={cover} /> : null}
           </Hero>
-          <TableOfContent ids={ids} />
           <Box className={contentClass()}>{children}</Box>
         </Grid>
       </article>

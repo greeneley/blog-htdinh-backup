@@ -49,17 +49,6 @@ const Header = (props: HeaderProps) => {
 
   return (
     <>
-      {/** Do not delete the following! Needed for Webmention.io */}
-      <a
-        className="hidden h-card"
-        data-testid="twitter-link"
-        aria-label="Follow me on Twitter"
-        title="Follow me on Twitter"
-        rel="me"
-        href="https://twitter.com/MaximeHeckel"
-      >
-        @MaximeHeckel
-      </a>
       {/**
        * Gracefully show the search component when activated
        *

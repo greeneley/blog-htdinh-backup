@@ -1,7 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import {
   Box,
-  Button,
   Card,
   css,
   Flex,
@@ -9,10 +8,8 @@ import {
   H1,
   H2,
   H3,
-  Icon,
   styled,
   Text,
-  VisuallyHidden,
 } from '@maximeheckel/design-system';
 import { format } from 'date-fns';
 import { motion, MotionProps } from 'framer-motion';
@@ -96,16 +93,7 @@ const IndexPage = (props: Props) => {
               marginLeft: '-var(--space-3)',
               marginRight: '-var(--space-3)',
             }}
-          >
-            <a href="xxx" style={{ textDecoration: 'none' }} tabIndex={-1}>
-              <Button variant="secondary" endIcon={<Icon.External />}>
-                About me
-              </Button>
-              <VisuallyHidden as="p">
-                Link redirects to my portfolio xxxx.
-              </VisuallyHidden>
-            </a>
-          </Flex>
+          ></Flex>
         </Box>
         <section>
           <H2>Featured</H2>

@@ -75,3 +75,8 @@ cypress/videos
 /out_publish/
 /out_functions/
 .vercel
+.nvmrc
+.npmrc
+.idea
+.idea/**/*
+out/
