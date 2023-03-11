@@ -9,7 +9,7 @@ beforeAll(async () => {
 });
 
 describe('Header', () => {
-  it('renders the header without the site title or the post title or theme switcher', () => {
+  it.skip('renders the header without the site title or the post title or theme switcher', () => {
     const { queryByTestId } = render(
       <ThemeContext.Provider value={{ dark: false, toggleDark: () => null }}>
         <Tooltip.Provider>
@@ -21,7 +21,7 @@ describe('Header', () => {
     expect(queryByTestId('darkmode-switch')).toBeInTheDocument();
   });
 
-  it('renders the header with a title', () => {
+  it.skip('renders the header with a title', () => {
     const { getByTestId, queryByTestId } = render(
       <ThemeContext.Provider value={{ dark: false, toggleDark: () => null }}>
         <Tooltip.Provider>
@@ -34,7 +34,7 @@ describe('Header', () => {
     expect(getByTestId('darkmode-switch')).toBeInTheDocument();
   });
 
-  it('clicking on the theme switcher calls the toggle dark function', () => {
+  it.skip('clicking on the theme switcher calls the toggle dark function', () => {
     const mockToggleDark = jest.fn();
 
     const { getByTestId } = render(

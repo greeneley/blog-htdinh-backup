@@ -79,4 +79,4 @@ cypress/videos
 .npmrc
 .idea
 .idea/**/*
-out
+out/
