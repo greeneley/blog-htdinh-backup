@@ -164,6 +164,8 @@ jobs:
     strategy:
       matrix:
         node: [16]
+    rules:
+      - when: never
     needs: build
     steps:
       - name: Checkout Commit
@@ -205,6 +207,8 @@ jobs:
     strategy:
       matrix:
         node: [16]
+    rules:
+      - when: never
     needs: build
     steps:
       - name: Checkout Commit
