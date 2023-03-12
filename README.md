@@ -17,6 +17,7 @@ This is the main code base for [my blog](https://htdinh.netlify.app)..
 - Stitches / CSS
 - MDX
 
+## Find idea for new posts
 
 ## Authors
 
