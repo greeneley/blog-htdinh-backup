@@ -77,7 +77,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.12.10",
-    "@netlify/plugin-nextjs": "4.40.2",
+    "@netlify/plugin-nextjs": "4.27.3",
     "@next/bundle-analyzer": "10.0.5",
     "@testing-library/dom": "^8.16.1",
     "@testing-library/jest-dom": "^5.16.5",
