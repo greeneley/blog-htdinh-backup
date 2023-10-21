@@ -1,4 +1,4 @@
-import { getCssText } from '@maximeheckel/design-system';
+import { getCssText } from '@dinh/design-system';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import Script from 'next/script';
 

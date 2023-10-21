@@ -1,4 +1,4 @@
-import { styled, Card, Grid } from '@maximeheckel/design-system';
+import { styled, Card, Grid } from '@dinh/design-system';
 import { motion } from 'framer-motion';
 import { AnimationCardContent } from '../Components';
 

@@ -1,9 +1,4 @@
-import {
-  Flex,
-  Grid,
-  Tooltip,
-  useKeyboardShortcut,
-} from '@maximeheckel/design-system';
+import { Flex, Grid, Tooltip, useKeyboardShortcut } from '@dinh/design-system';
 import Logo from '@theme/components/Logo';
 import useProgress from '@theme/hooks/useProgress';
 import useScrollCounter from '@theme/hooks/useScrollCounter';

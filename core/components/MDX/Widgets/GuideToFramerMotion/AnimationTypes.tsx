@@ -1,9 +1,4 @@
-import {
-  Card,
-  Label,
-  Range,
-  useDebouncedValue,
-} from '@maximeheckel/design-system';
+import { Card, Label, Range, useDebouncedValue } from '@dinh/design-system';
 import { HighlightedCodeText } from '@theme/components/Code/CodeBlock';
 import { motion } from 'framer-motion';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { css } from '@maximeheckel/design-system';
+import { css } from '@dinh/design-system';
 import { LogoProps } from './types';
 
 const transitionLogo = css({

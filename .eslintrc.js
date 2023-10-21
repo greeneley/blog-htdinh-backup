@@ -27,6 +27,12 @@ module.exports = {
     'react/prop-types': 0,
     'no-console': 'error',
     'react/no-unescaped-entities': 'off',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
   },
   settings: {
     react: {

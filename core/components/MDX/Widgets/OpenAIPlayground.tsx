@@ -1,10 +1,4 @@
-import {
-  Button,
-  Card,
-  Flex,
-  Switch,
-  TextArea,
-} from '@maximeheckel/design-system';
+import { Button, Card, Flex, Switch, TextArea } from '@dinh/design-system';
 import React from 'react';
 
 type PromptStatus = 'submitting' | 'idle';

@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Grid } from '@maximeheckel/design-system';
+import { Box, Card, Flex, Grid } from '@dinh/design-system';
 import { HighlightedCodeText } from '@theme/components/Code/CodeBlock';
 import React from 'react';
 

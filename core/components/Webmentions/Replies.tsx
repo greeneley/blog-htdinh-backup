@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-import { styled } from '@maximeheckel/design-system';
+import { styled } from '@dinh/design-system';
 import { RepliesProps, Reply } from './types';
 
 const RepliesList = styled(motion.ul, {

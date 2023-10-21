@@ -6,9 +6,9 @@ import {
   Icon,
   Text,
   Tooltip,
-} from '@maximeheckel/design-system';
+} from '@dinh/design-system';
 import { AnimatePresence, LayoutGroup, motion, Reorder } from 'framer-motion';
-import { css, styled } from '@maximeheckel/design-system';
+import { css, styled } from '@dinh/design-system';
 import React from 'react';
 
 const HR = styled('hr', {

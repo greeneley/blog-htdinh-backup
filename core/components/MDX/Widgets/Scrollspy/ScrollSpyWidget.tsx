@@ -6,7 +6,7 @@ import {
   InlineCode,
   Range,
   useTheme,
-} from '@maximeheckel/design-system';
+} from '@dinh/design-system';
 import useScrollSpy from '@theme/hooks/useScrollSpy';
 import React from 'react';
 import { AnimationCardContent, Form, HighlightedValue } from '../Components';

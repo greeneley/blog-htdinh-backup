@@ -1,12 +1,4 @@
-import {
-  Anchor,
-  Box,
-  css,
-  Flex,
-  Grid,
-  Pill,
-  Text,
-} from '@maximeheckel/design-system';
+import { Anchor, Box, css, Flex, Grid, Pill, Text } from '@dinh/design-system';
 import { format } from 'date-fns';
 import Link from 'next/link';
 import React from 'react';

@@ -2,7 +2,7 @@ import LineChart from '@theme/components/Charts/LineChart';
 import { ParentSize } from '@visx/responsive';
 import { motion } from 'framer-motion';
 import { GraphQLClient, gql } from 'graphql-request';
-import { styled, Card } from '@maximeheckel/design-system';
+import { styled, Card } from '@dinh/design-system';
 import { useQuery } from 'react-query';
 
 const GraphLabel = styled('div', {

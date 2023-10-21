@@ -1,4 +1,4 @@
-import { EM, Flex, Grid, styled, Text } from '@maximeheckel/design-system';
+import { EM, Flex, Grid, styled, Text } from '@dinh/design-system';
 import Logo from '@theme/components/Logo';
 
 const FooterBlock = styled('footer', {

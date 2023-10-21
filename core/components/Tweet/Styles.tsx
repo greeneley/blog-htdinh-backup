@@ -1,4 +1,4 @@
-import { css, Shadows, styled } from '@maximeheckel/design-system';
+import { css, Shadows, styled } from '@dinh/design-system';
 
 export const TweetWrapper = styled('div', {
   color: 'var(--maximeheckel-colors-typeface-primary)',

@@ -1,4 +1,4 @@
-import { Flex, Text } from '@maximeheckel/design-system';
+import { Flex, Text } from '@dinh/design-system';
 import React from 'react';
 
 const initialCounts = {

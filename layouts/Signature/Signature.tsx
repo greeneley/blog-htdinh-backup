@@ -1,4 +1,4 @@
-import { styled, Anchor, Text } from '@maximeheckel/design-system';
+import { styled, Anchor, Text } from '@dinh/design-system';
 import WebmentionReplies from '@theme/components/Webmentions/WebmentionReplies';
 import dynamic from 'next/dynamic';
 

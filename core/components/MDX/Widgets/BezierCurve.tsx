@@ -1,11 +1,4 @@
-import {
-  Button,
-  Card,
-  Flex,
-  Icon,
-  Range,
-  Tooltip,
-} from '@maximeheckel/design-system';
+import { Button, Card, Flex, Icon, Range, Tooltip } from '@dinh/design-system';
 import useInterval from '@theme/hooks/useInterval';
 import { Group } from '@visx/group';
 import { ParentSize } from '@visx/responsive';

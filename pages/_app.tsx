@@ -1,10 +1,6 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
-import {
-  globalStyles,
-  ThemeProvider,
-  Tooltip,
-} from '@maximeheckel/design-system';
+import { globalStyles, ThemeProvider, Tooltip } from '@dinh/design-system';
 import { DefaultSeo } from '@theme/components/Seo';
 import 'styles/global.css';
 import 'styles/font.css';

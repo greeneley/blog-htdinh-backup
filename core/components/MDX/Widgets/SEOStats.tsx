@@ -1,4 +1,4 @@
-import { styled, Flex } from '@maximeheckel/design-system';
+import { styled, Flex } from '@dinh/design-system';
 import LineChart from '@theme/components/Charts/LineChart';
 import { ParentSize } from '@visx/responsive';
 

@@ -1,4 +1,4 @@
-import { styled, Text } from '@maximeheckel/design-system';
+import { styled, Text } from '@dinh/design-system';
 import { loader } from 'lib/next-image-loader';
 import NextImage, { ImageProps } from 'next/image';
 

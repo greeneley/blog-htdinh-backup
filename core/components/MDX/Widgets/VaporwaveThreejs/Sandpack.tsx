@@ -1,6 +1,6 @@
 import Sandpack from '@theme/components/Code/Sandpack';
 import { useInView } from 'react-intersection-observer';
-import { css } from '@maximeheckel/design-system';
+import { css } from '@dinh/design-system';
 import { script1 } from './script1';
 import { script2 } from './script2';
 import { script3 } from './script3';

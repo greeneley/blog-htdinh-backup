@@ -1,4 +1,4 @@
-import { Anchor, Flex, Text } from '@maximeheckel/design-system';
+import { Anchor, Flex, Text } from '@dinh/design-system';
 import { format } from 'date-fns';
 import Image from 'next/image';
 import { TransformedTweet } from 'types/tweet';

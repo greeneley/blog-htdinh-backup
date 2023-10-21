@@ -1,4 +1,4 @@
-import { Box, Card, Flex, Text } from '@maximeheckel/design-system';
+import { Box, Card, Flex, Text } from '@dinh/design-system';
 import { HighlightedCodeText } from '@theme/components/Code/CodeBlock';
 import { LayoutGroup, motion } from 'framer-motion';
 import React from 'react';

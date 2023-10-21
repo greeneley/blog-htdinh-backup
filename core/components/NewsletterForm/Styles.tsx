@@ -1,4 +1,4 @@
-import { styled, Card, Text } from '@maximeheckel/design-system';
+import { styled, Card, Text } from '@dinh/design-system';
 import React from 'react';
 
 export const NewsletterFormContent = styled(Card.Body, {

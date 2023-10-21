@@ -1,4 +1,4 @@
-import { Button, Tooltip } from '@maximeheckel/design-system';
+import { Button, Tooltip } from '@dinh/design-system';
 import { motion, useMotionValue } from 'framer-motion';
 import React from 'react';
 

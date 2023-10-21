@@ -6,7 +6,7 @@ import {
   Switch,
   Text,
   TextInput,
-} from '@maximeheckel/design-system';
+} from '@dinh/design-system';
 import CommandCenterButton from '@theme/components/Buttons/CommandCenterButton';
 import React from 'react';
 

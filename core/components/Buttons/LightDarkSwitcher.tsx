@@ -1,4 +1,4 @@
-import { useTheme, Button, Tooltip } from '@maximeheckel/design-system';
+import { useTheme, Button, Tooltip } from '@dinh/design-system';
 import { motion, useMotionValue, useTransform } from 'framer-motion';
 
 const LightDarkSwitcher = () => {

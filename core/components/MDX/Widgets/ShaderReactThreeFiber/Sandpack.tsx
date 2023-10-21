@@ -1,4 +1,4 @@
-import { Box, useTheme } from '@maximeheckel/design-system';
+import { Box, useTheme } from '@dinh/design-system';
 import Sandpack from '@theme/components/Code/Sandpack';
 import useGPUTier from '@theme/hooks/useGPUTier';
 import { useInView } from 'react-intersection-observer';
