@@ -1,0 +1,34 @@
+= My personal blog
+
+image:https://api.netlify.com/api/v1/badges/1cd594e1-9040-4c6f-85f3-836cd56eb214/deploy-status[Netlify Status,link=https://app.netlify.com/sites/htdinh/deploys]
+
+This is the main code base for https://htdinh.netlify.app[my blog]..
+
+== Features
+
+* Light/dark mode toggle
+* Live previews
+* Fullscreen mode
+* Cross platform
+
+== Tech Stack
+
+* Next.js
+* Stitches / CSS
+* MDX
+
+== How to start
+
+```
+yarn run dev
+```
+
+== Find idea for new posts
+
+== Authors
+
+* https://www.github.com/greeneley[@greeneley]
+
+== License
+
+https://choosealicense.com/licenses/mit/[MIT]
