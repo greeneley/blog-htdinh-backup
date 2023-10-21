@@ -123,66 +123,69 @@ const IndexPage = (props: Props) => {
                     whileHover="hover"
                   >
                     <Link
+                      legacyBehavior
                       href={`/posts/${post.slug}/`}
                       style={{
                         textDecoration: 'none',
                         color: 'var(--maximeheckel-colors-typeface-secondary)',
                       }}
                     >
-                      <Glow
-                        css={{
-                          background: post.colorFeatured,
-                        }}
-                        variants={glowVariants}
-                        transition={{
-                          type: 'tween',
-                          ease: 'easeOut',
-                          duration: 0.4,
-                        }}
-                      />
-                      <Box
-                        css={{
-                          height: '95%',
-                          width: '105%',
-                          position: 'absolute',
-                          borderRadius: 'var(--border-radius-2)',
-                          top: '50%',
-                          left: '50%',
-                          background: 'var(--maximeheckel-colors-body)',
-                          transform: 'translateY(-50%) translateX(-50%)',
-                          filter: 'blur(20px)',
-                          transition: '0.5s',
+                      <div>
+                        <Glow
+                          css={{
+                            background: post.colorFeatured,
+                          }}
+                          variants={glowVariants}
+                          transition={{
+                            type: 'tween',
+                            ease: 'easeOut',
+                            duration: 0.4,
+                          }}
+                        />
+                        <Box
+                          css={{
+                            height: '95%',
+                            width: '105%',
+                            position: 'absolute',
+                            borderRadius: 'var(--border-radius-2)',
+                            top: '50%',
+                            left: '50%',
+                            background: 'var(--maximeheckel-colors-body)',
+                            transform: 'translateY(-50%) translateX(-50%)',
+                            filter: 'blur(20px)',
+                            transition: '0.5s',
 
-                          '@media(max-width: 700px)': {
-                            display: 'none',
-                          },
-                        }}
-                      />
-                      <Card<MotionProps>
-                        as={motion.div}
-                        variants={cardVariants}
-                        transition={{
-                          type: 'tween',
-                          ease: 'easeOut',
-                          duration: 0.4,
-                        }}
-                        depth={1}
-                      >
-                        <Card.Body>
-                          <H3
-                            gradient
-                            css={{
-                              marginBottom: '8px',
-                              backgroundImage: post.colorFeatured!,
-                            }}
-                          >
-                            {post.title}
-                          </H3>
-                          <Text as="p" css={{ marginBottom: '0px' }}>
-                            {post.subtitle}
-                          </Text>
-                        </Card.Body>
-                      </Card>
+                            '@media(max-width: 700px)': {
+                              display: 'none',
+                            },
+                          }}
+                        />
+                        <Card<MotionProps>
+                          as={motion.div}
+                          variants={cardVariants}
+                          transition={{
+                            type: 'tween',
+                            ease: 'easeOut',
+                            duration: 0.4,
+                          }}
+                          depth={1}
+                        >
+                          <Card.Body>
+                            <H3
+                              gradient
+                              css={{
+                                marginBottom: '8px',
+                                backgroundImage: post.colorFeatured!,
+                              }}
+                            >
+                              {post.title}
+                            </H3>
+                            <Text as="p" css={{ marginBottom: '0px' }}>
+                              {post.subtitle}
+                            </Text>
+                          </Card.Body>
+                        </Card>
+                      </div>
                     </Link>
                   </motion.li>
                 );
@@ -238,6 +241,7 @@ const IndexPage = (props: Props) => {
                     href={`/posts/${post.slug}/`}
                     passHref
                     style={{ textDecoration: 'none', fontWeight: 500 }}
+                    legacyBehavior
                   >
                     {/* Revisit this component: merge Anchor and block together (extend block from Anchor) */}
                     <Block data-testid="article-link">

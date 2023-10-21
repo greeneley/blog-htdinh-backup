@@ -1,0 +1,134 @@
+---
+title: 'Git commit: Một vài kinh nghiệm để xử lý'
+subtitle: Một vài kinh nghiệm để xử lý các vấn đề về git commit
+date: '2023-10-22 11:33:00 +0800'
+updated: '2023-10-22 11:33:00 +0800'
+categories: []
+keywords:
+  [git]
+slug: git-commit
+type: 'blogPost'
+featured: true
+colorFeatured: 'linear-gradient(90deg, rgba(34,26,179,1) 0%, rgba(9,121,111,1) 53%, rgba(0,212,255,1) 100%)'
+fontFeatured: '#c2c2fc'
+---
+
+Ngày nay, hầu hết mọi dự án đều sử dụng Git để quản lý mã nguồn. Trong một dự án, thường có nhiều thành viên tham gia phát triển, được phân thành hai loại:
+
+1. Những người đang tích cực phát triển dự án.
+2. Những người đã rời dự án.
+
+Mỗi khi chúng ta phát triển một tính năng mới hoặc sửa lỗi trong dự án, chúng ta luôn tạo commit và đẩy chúng lên các kho lưu trữ mã nguồn như Bitbucket, GitLab, GitHub và các nơi tương tự. Công việc này có vẻ đơn giản, nhưng khi dự án phức tạp hoặc có nhiều thành viên tham gia, nó có thể gây ra nhiều vấn đề:
+- Trong giai đoạn học đại học, chúng ta thường tham gia vào dự án với một số lượng thành viên nhỏ. Dự án thường được tạo ra để mục đích học tập nên số lượng commit và mã nguồn thường không quá lớn. Quản lý commit trong Git ở giai đoạn này khá đơn giản, và sinh viên thường không nhận thấy các vấn đề liên quan đến tổ chức commit.
+- Tuy nhiên, khi đi làm và tham gia vào các dự án lớn, có nhiều thành viên và dự án đã tồn tại từ lâu, số lượng commit có thể trở nên lớn đáng kể và ngày càng tăng. Khi đó, quản lý commit trở nên rất quan trọng.
+
+Tôi sẽ liệt kê một số vấn đề bạn có thể gặp phải nếu không có một phương pháp quản lý hiệu quả:
+1. Thông điệp của các commit không rõ ràng, không cung cấp thông tin cụ thể về những gì commit đó thực hiện. Điều này làm cho việc theo dõi và tìm kiếm commit trở nên khó khăn.
+2. Giả sử phần mềm của bạn gặp lỗi và bạn cần sửa lỗi ngay lập tức. Làm sao để tìm commit nào gây ra lỗi trong số hàng trăm ngàn commit?
+3. Lịch sử Git trở nên lộn xộn, các commit thường xếp chồng lên nhau, giống như một đống kim cương, khiến cho bố cục của các commit trở nên không rõ ràng và việc theo dõi mã nguồn trở nên khó khăn.
+
+Trong bài viết này, tôi sẽ phân tích từng vấn đề trên và đề xuất các giải pháp cụ thể để giúp bạn quản lý mã nguồn của dự án của mình một cách hiệu quả hơn.
+# 1. Vấn đề 1: Hãy đặt message cho commit một cách hợp lý và dễ hiểu
+
+Chúng ta có 2 tấm hình như sau: 
+
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697899235/Blogs/Git%20commit/ddshx6szrlsdhf3peopc.png)
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697899440/Blogs/Git%20commit/zpfryy1adkfxhqw26pxh.png)
+
+Ở tấm hình thứ nhất:
+- Bạn có hiểu được các commit đó làm gì không ? Ví dụ commit `68abca0`: updates có tác dụng gì ?
+
+Ở tấm hình thứ hai:
+- Các message của commit có cấu trúc rõ ràng `<type>(scope): <description> (<issue_id>)`.
+- Chúng ta dễ dàng hiểu commit đó làm gì và theo dõi được issue mà nó sinh ra
+
+Thông qua 2 hình ảnh trên, rõ ràng hệ thống commit ở hình thứ hai rõ ràng và dễ hiểu hơn hình thứ nhất.
+
+*Nhắc lại:* commit message là một thông điệp tóm tắt những gì chúng ta làm và tại sao chúng ta thay đổi.
+
+Một commit message được xem là rõ ràng, dễ hiểu và dễ tìm kiếm thì nên chứa 3 thông tin như sau:
+
+- Chúng ta thay đổi cái gì trong commit ? (What question)
+- Vì sao chúng ta thay đổi ? (Why question)
+- (Tùy chọn) commit này được sinh ra từ ticket hoặc issue nào ? (Where question)
+
+**Ví dụ:** Remove abc.tsx to reduce bad performance (#1234)
+
+Hiện nay, một trong những quy tắc commit nổi tiếng được rất nhiều dự án đang thực hiện, đó là [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+Một số dự án điển hình đang sử dụng bộ quy tắc ở trên như là:
+- [Semantic UI React](https://github.com/Semantic-Org/Semantic-UI-React)
+
+
+Bên cạnh bộ quy tắc này, một bộ quy tắc khác mà tôi đã được tham gia phát triển, cấu trúc message commit như sau:
+```<issue_id>: <description```
+
+**Ví dụ:** A123: Create docker image to start X service
+
+Một số dự án sử dụng quy tắc này như sau:
+
+- [Undersea](https://github.com/undertheseanlp/underthesea)
+
+Luôn nhớ đặt message cho commit một cách cẩn thận và khoa học.
+
+# 2. Vấn đề số 2: Cách dò tìm bug trong 1 commit nhanh nhất
+
+Tìm kiếm và sửa lỗi là một kỹ năng quan trọng trong nghề lập trình. Trong quá trình làm việc, có thể bạn đã hoặc sẽ gặp phải tình huống sau đây:
+
+<Callout variant="info">
+
+  Bạn đang làm việc trên một dự án phát triển phía frontend dựa trên React, và bạn phát hiện một lỗi xuất hiện trên màn hình. Vì không quản lý trạng thái (state) hiệu quả, dẫn đến việc re-render xảy ra ở nhiều nơi. Bạn không thể xác định cụ thể vị trí nào gây ra lỗi. Khi đó, bạn hy vọng tìm ra commit gây ra lỗi để xác định vị trí cụ thể
+  Tuy nhiên, bạn gặp một số khó khăn như sau:
+  1. Sau khi kiểm tra lịch sử của dự án, bạn thấy có quá nhiều commit
+  2. Tại mỗi commit, có quá nhiều thay đổi (hàng trăm tệp được cập nhật).
+  3. Khi quay về từng commit, do đặc thù của dự án, bạn phải xây dựng lại toàn bộ mã nguồn. Quá trình xây dựng này thường mất rất nhiều thời gian.
+
+  Vì vậy, việc tìm commit gây ra lỗi thực sự rất khó khăn cho bạn.
+  ![](http://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697900169/Blogs/Git%20commit/r2oqixoklwvhpgnqjnbq.jpg)
+</Callout>
+
+May mắn thay, git hỗ trợ cho chúng ta một công cụ rất hữu hiệu: ```git bisect```
+
+Git bisect sẽ giúp bạn tìm kiếm chính xác commit gây ra lỗi bằng cách sử dụng thuật toán tìm kiếm nhị phân. Nhờ vào thuật toán này, giả sử có N commit cần kiểm tra, bạn chỉ mất tối đa log(N) lần là sẽ phát hiện ra commit gây lỗi trong tích tắc
+
+Để sử dụng git bisect, có 4 thao tác căn bản bạn cần nhớ:
+- `git bisect start`: được sử dụng ở commit mới nhất hoặc commit mà có bug. Khi sử dụng lệnh này, commit này sẽ được xem là điểm bắt đầu tìm kiếm.
+- `git bisect good`: đánh dấu commit không có bug
+- `git bisect bad`: đánh dấu commit có bug
+- `git bisect reset`: thoát khỏi git bisect
+
+Cách sử dụng của git bisect rất đơn giản:
+
+- Đầu tiên, bạn cần đảm bảo bạn đang ở commit mới nhất. Bạn vào git bisect thông qua lệnh: `git bisect start.`Tiếp theo, vì commit này bị lỗi, thao tác lệnh tiếp theo: `git bisect bad` . Lúc này, commit mới nhất này được đánh dấu là có bug. Commit này được gọi là start commit.
+- Tiếp theo, bạn hãy chọn một commit trong quá khứ (1 ngày, 10 ngày, 100 ngày…). Checkout source code của bạn về đúng commit này và kiểm tra xem bug đó có xảy ra không. Nếu vẫn xảy ra, chọn một commit cũ hơn nữa và kiểm tra lại. Nếu bug không xảy ra, bạn thao tác lệnh sau: `git bisect good` Khi đó, commit này sẽ đánh dấu không có bug, gọi commit này là end commit. Quá trình tìm kiếm nhị phân sẽ kiểm tra từ start commit đến end commit.
+- Git bisect sẽ tự động checkout cho bạn vào một commit nằm giữa start và end. Bạn hãy tự kiểm tra có bug xảy ra không. Nếu có thì thao tác lệnh: `git bisect bad` , ngược lại thì `git bisect good`
+- Lặp lại quá trình trên đến khi kết thúc. Bạn sẽ tìm ra được commit bắt đầu gây ra bug.
+
+Nhờ git bisect, chúng ta có thể tìm ra commit gây bug trong tích tắc, tiết kiệm rất nhiều thời gian cho lập trình viên.
+
+# 3. Vấn đề 3: Git history rất lộn xộn. Hãy luôn rebase
+
+Khi nhìn vào history commit, chúng ta có thể dễ dàng biết: dự án này đang sử dụng git merge hay git rebase. 
+Hãy xem 2 tấm hình dưới đây:
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697900428/Blogs/Git%20commit/wmapwktlrfshefphmcpn.png)
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697900450/Blogs/Git%20commit/s27ugrbkfyly3hwwnkrr.png)
+
+Ở hình trên, chúng ta có thể thấy: các commit rất là hỗn loạn, toàn bộ commit tạo thành một hình dạng kim cương. Tuy nhiên, ơ hình dưới, tất cả commit đều thẳng hàng, commit sau nối tiếp commit trước tạo thành 1 đường thẳng, nhìn rất trực quan.
+
+Vâng, hình trên là việc sử dụng git merge mỗi khi chúng ta muốn gộp feature hoặc fix bug branch của mình vào nhánh chính. Hình dưới là việc luôn sử dụng git rebase để đảm bảo nhánh chứa feature hoặc fix bug của chúng ta luôn được khởi tạo từ commit mới nhất từ nhánh chính. 
+
+Việc sử dụng git merge hay git rebase luôn có ưu và nhược điểm. Tuy nhiên, hiện nay, hầu hết các dự án đều khuyến khích sử dụng git rebase vì hạn chế được conflict mỗi khi merge vào nhánh chính, cũng như giúp ta dễ dàng hiểu được lịch sử commit. Vì thế, là một người có nhiệm vụ quản lý git của dự án, hãy đảm bảo thành viên luôn sử dụng git rebase.
+
+#### Lời khuyên: Hãy nhớ xóa branch của mình sau khi merge
+
+Mỗi khi phát triển một tính năng mới hoặc sửa lỗi, chúng ta luôn luôn tạo một branch của riêng mình. Sau khi phát triển tính năng xong hoặc sửa xong, chúng ta tiến hành merge branch của mình vào branch chính của dự án. Sau khi merge thành công, việc xóa branch của mình là việc rất cần thiết vì những lý do sau:
+- Không cần phải giữ branch đó của mình nữa
+- Nếu branch đó không bị xóa, nó sẽ hiển thị trong lịch sử commit. Ví dụ:
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1697900582/Blogs/Git%20commit/av1juukpoaxnv718sau8.png)
+
+Chúng ta thấy có 2 commit màu vàng và màu đỏ rẽ nhánh trên branch chính của chúng ta. 2 commit này nằm ở 2 branch riêng mà người tạo quên xóa sau khi merge.
+
+Nếu chúng ta xóa branch sau khi merge, branch chính của chúng ta sẽ có toàn bộ commit theo 1 đường thẳng. Điều này làm đẹp lịch sử commit của chúng ta.
+
+Trên đây là toàn bộ các kinh nghiệm của bản thân tôi khi làm việc với git sau nhiều dự án. Hy vọng chúng sẽ giúp ích cho các bạn trên con đường phát triển kỹ năng về phần mềm.
+
