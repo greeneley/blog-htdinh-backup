@@ -50,7 +50,7 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
                 fontSize: 'var(--font-size-2)',
               }}
             >
-              <Link href="/" passHref>
+              <Link href="/" passHref legacyBehavior>
                 <Anchor arrow="left" data-testid="home-link" discreet>
                   Home
                 </Anchor>

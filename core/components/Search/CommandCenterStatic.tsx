@@ -28,7 +28,7 @@ const CommandCenterStatic = () => (
     </Item>
     <Separator>Navigation</Separator>
     <Item data-testid="navigation" key="home-navigation">
-      <Link href="/">
+      <Link href="/" legacyBehavior>
         <a>
           <Icon.Arrow size={4} />
           <span style={{ marginLeft: '20px' }}>Home</span>
@@ -36,7 +36,7 @@ const CommandCenterStatic = () => (
       </Link>
     </Item>
     <Item data-testid="navigation" key="design-navigation">
-      <Link href="/design/">
+      <Link href="/design/" legacyBehavior>
         <a>
           <Icon.Arrow size={4} />
           <span style={{ marginLeft: '20px' }}>Design System</span>

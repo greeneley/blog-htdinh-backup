@@ -72,7 +72,7 @@ const Header = (props: HeaderProps) => {
             <Flex className={fixTruncate()}>
               <Tooltip id="hometooltip" content="Home">
                 <span>
-                  <Link href="/">
+                  <Link href="/" legacyBehavior>
                     <a
                       aria-label="Home"
                       aria-describedby="hometooltip"

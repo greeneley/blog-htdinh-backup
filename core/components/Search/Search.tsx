@@ -275,6 +275,7 @@ const Search = (props: Props) => {
                     onPointerEnter={() => handlePointer(index)}
                   >
                     <Link
+                      legacyBehavior
                       href={`/${
                         result.type === 'snippet' ? 'snippets' : 'posts'
                       }/${result.slug}`}
