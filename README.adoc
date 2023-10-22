@@ -19,9 +19,20 @@ This is the main code base for https://htdinh.netlify.app[my blog]..
 
 == How to start
 
+Trong môi trường local, để chạy server, thực thi lệnh sau:
+
 ```
 yarn run dev
 ```
+
+Các lệnh sau được dùng để build production:
+
+```
+yarn build
+yarn start
+```
+
+Khi đẩy lên production, cần đảm bảo file `yarn.lock` được build đúng với package.json
 
 == Find idea for new posts
 
