@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { AppProps } from 'next/app';
 import { globalStyles, ThemeProvider, Tooltip } from '@dinh/design-system';
+import { DefaultSeo } from '@theme/components/Seo';
 import 'styles/global.css';
 import 'styles/font.css';
 
@@ -17,6 +18,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <title>Hai Dinh Thanh</title>
       </Head>
+      <DefaultSeo />
       <Tooltip.Provider>
         <Component {...pageProps} />
       </Tooltip.Provider>
