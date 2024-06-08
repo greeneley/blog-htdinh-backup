@@ -21,8 +21,8 @@ module.exports = {
   titleAlt: 'Dinh Thanh Hai | Blog',
   description:
     "Hi I'm Dinh, and this is my blog. Here, I share through my writing my experience as a frontend engineer and everything I'm learning about on React, Typescript, SwiftUI, Serverless, and testing.",
-  url: 'https://blog.maximeheckel.com', // Site domain without trailing slash
-  siteUrl: 'https://blog.maximeheckel.com/', // url + pathPrefix
+  url: '', // Site domain without trailing slash
+  siteUrl: '', // url + pathPrefix
   siteLanguage: 'en', // Language Tag on <html> element
   // logo: 'src/static/logo/logo.png',
   image:
@@ -32,5 +32,5 @@ module.exports = {
   author: 'Thanh Hai', // Author for schemaORGJSONLD
   themeColor: '#000000',
   backgroundColor: '#ffffff',
-  twitter: '@MaximeHeckel', // Twitter Username
+  twitter: '', // Twitter Username
 };

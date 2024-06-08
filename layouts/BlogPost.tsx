@@ -42,7 +42,7 @@ const BlogLayout = ({ children, frontMatter }: Props) => {
   return (
     <Layout footer={true} header={true} headerProps={headerProps}>
       <article className="h-entry">
-        <Grid columns="small" gapX={4}>
+        <Grid columns="medium" gapX={4}>
           <Hero>
             <Box
               css={{

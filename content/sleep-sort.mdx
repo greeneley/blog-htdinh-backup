@@ -1,0 +1,20 @@
+---
+title: 'Sleep sort: Thuật toán sắp xếp ngủ'
+subtitle: 
+date: '2024-06-06'
+updated: '2024-06-06'
+categories: []
+keywords:
+  [algorithm]
+slug: sleep-sort
+type: 'blogPost'
+---
+
+Nếu có giải thưởng cho thuật toán "lười" nhất thì Sleep Sort gọi tên trong danh sách ngay. Sở dĩ thuật toán này được đặt tên là "Sleep Sort" vì cách hoạt động của nó liên quan đến việc sử dụng thời gian chờ (sleep time).
+Trong thuật toán này, mỗi phần tử trong mảng được "ngủ" trong một khoảng thời gian tỉ lệ với giá trị của nó. Khi một phần tử "ngủ" xong, nó được thêm vào mảng kết quả. Do đó, quá trình sắp xếp diễn ra dựa trên thời gian chờ của từng phần tử, và việc "ngủ" này giống như mỗi phần tử đang "ngủ" cho đến khi đến lượt của nó được thức dậy và đưa vào vị trí đúng trong mảng kết quả. Tên gọi "Sleep Sort" phản ánh cách thuật toán này hoạt động, với việc sử dụng thời gian chờ (sleep) để sắp xếp các phần tử.
+
+Trong thuật toán này, chúng ta tạo ra các luồng (threads) khác nhau cho mỗi phần tử trong mảng đầu vào và sau đó mỗi luồng đều "ngủ" (sleep) trong một khoảng thời gian tỉ lệ với giá trị của phần tử tương ứng. Do đó, luồng có thời gian ngủ ít nhất sẽ tỉnh dậy đầu tiên và số đó được in ra, sau đó là phần tử ít thời gian ngủ hơn và cứ tiếp tục như vậy. Phần tử lớn nhất sẽ tỉnh dậy sau một khoảng thời gian dài và sau đó phần tử đó được in ra cuối cùng. Do đó, đầu ra là một mảng đã được sắp xếp.
+
+Tuy nhiên, thuật toán này có một số hạn chế như là không hoạt động với các số âm, vì thread không thể ngủ với một khoảng thời gian âm.
+
+![](https://i.redd.it/mzx2x2v13gty.jpg)
