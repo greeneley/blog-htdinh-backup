@@ -113,7 +113,7 @@ const NewsletterForm = (props: Props) => {
               variant="secondary"
             >
               Subscribe to{' '}
-              <Anchor underline href="https://buttondown.email/MaximeHeckel">
+              <Anchor underline href="https://buttondown.email/haidinhthanh">
                 my newsletter
               </Anchor>{' '}
               to receive a monthly digest containing:
@@ -314,7 +314,7 @@ const NewsletterForm = (props: Props) => {
             <ErrorMessage>
               Looks like you already subscribed! If you think this is a mistake
               you can still subscribe by heading directly to my{' '}
-              <Anchor href="https://buttondown.email/MaximeHeckel" underline>
+              <Anchor href="https://buttondown.email/haidinhthanh" underline>
                 Buttondown publication
               </Anchor>
               .
@@ -323,7 +323,7 @@ const NewsletterForm = (props: Props) => {
             <ErrorMessage>
               😬 woops! We just hit a snag here, but don&apos;t worry! You can
               still subscribe by heading directly to my{' '}
-              <Anchor href="https://buttondown.email/MaximeHeckel" underline>
+              <Anchor href="https://buttondown.email/haidinhthanh" underline>
                 Buttondown publication
               </Anchor>
               .

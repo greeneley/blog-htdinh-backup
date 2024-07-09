@@ -17,7 +17,7 @@ const WebmentionReplies = ({ title, url }: Props) => {
 
   const [replies, setReplies] = React.useState<Reply[]>([]);
   const perPage = 500;
-  const text = `${title} by @MaximeHeckel ${url}`;
+  const text = `${title} by @haidinhthanh ${url}`;
 
   const getMentions = React.useCallback(
     () =>

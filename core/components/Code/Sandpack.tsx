@@ -10,13 +10,13 @@ import setupFiles from './SandpackSetupFiles';
 // Default Theme
 const theme = {
   colors: {
-    hover: 'var(--maximeheckel-colors-brand)',
-    clickable: 'var(--maximeheckel-colors-typeface-secondary)',
-    accent: 'var(--maximeheckel-colors-brand)',
-    errorSurface: 'var(--maximeheckel-colors-danger-emphasis)',
-    error: 'var(--maximeheckel-colors-danger)',
-    surface3: 'var(--maximeheckel-colors-emphasis)',
-    surface2: 'var(--maximeheckel-border-color)',
+    hover: 'var(--haidinhthanh-colors-brand)',
+    clickable: 'var(--haidinhthanh-colors-typeface-secondary)',
+    accent: 'var(--haidinhthanh-colors-brand)',
+    errorSurface: 'var(--haidinhthanh-colors-danger-emphasis)',
+    error: 'var(--haidinhthanh-colors-danger)',
+    surface3: 'var(--haidinhthanh-colors-emphasis)',
+    surface2: 'var(--haidinhthanh-border-color)',
     surface1: 'var(--code-snippet-background)',
   },
   syntax: {
@@ -79,13 +79,13 @@ const SandpackWrapper = styled('div', {
     fontSize: '12px',
     userSelect: 'none',
     opacity: '1',
-    color: 'var(--maximeheckel-colors-typeface-tertiary)',
+    color: 'var(--haidinhthanh-colors-typeface-tertiary)',
   },
   '.button': {
-    backgroundColor: 'var(--maximeheckel-colors-body)!important',
+    backgroundColor: 'var(--haidinhthanh-colors-body)!important',
     cursor: 'pointer !important',
     '&:hover': {
-      backgroundColor: 'var(--maximeheckel-colors-body)!important',
+      backgroundColor: 'var(--haidinhthanh-colors-body)!important',
     },
   },
 });

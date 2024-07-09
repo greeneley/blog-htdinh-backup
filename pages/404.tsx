@@ -9,7 +9,7 @@ const Wrapper = styled('div', {
   display: 'flex',
   height: 'calc(100vh)',
   alignItems: 'center',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   gridColumn: 2,
 });
 

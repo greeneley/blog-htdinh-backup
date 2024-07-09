@@ -105,9 +105,9 @@ const Section = styled('section', {
   gap: '20px',
   justifyContent: 'center',
   alignItems: 'center',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   borderRadius: 'var(--border-radius-2)',
-  border: '1px solid var(--maximeheckel-colors-emphasis)',
+  border: '1px solid var(--haidinhthanh-colors-emphasis)',
 
   variants: {
     intersecting: {
@@ -116,7 +116,7 @@ const Section = styled('section', {
           'linear-gradient(to right bottom, rgb(147, 197, 253), rgb(196, 181, 253))',
       },
       false: {
-        background: 'var(--maximeheckel-colors-foreground)',
+        background: 'var(--haidinhthanh-colors-foreground)',
       },
     },
   },
@@ -129,10 +129,10 @@ const Offset = styled('div', {
   zIndex: '2',
   background: `repeating-linear-gradient(
     -45deg,
-    var(--maximeheckel-colors-foreground),
-    var(--maximeheckel-colors-foreground) 5px,
-    var(--maximeheckel-colors-emphasis) 5px,
-    var(--maximeheckel-colors-emphasis) 10px
+    var(--haidinhthanh-colors-foreground),
+    var(--haidinhthanh-colors-foreground) 5px,
+    var(--haidinhthanh-colors-emphasis) 5px,
+    var(--haidinhthanh-colors-emphasis) 10px
   )`,
 });
 
@@ -155,7 +155,7 @@ const WidgetRoot = styled('div', {
 
   '&::-webkit-scrollbar-thumb': {
     borderRadius: '8px',
-    backgroundColor: 'var(--maximeheckel-colors-typeface-tertiary)',
+    backgroundColor: 'var(--haidinhthanh-colors-typeface-tertiary)',
   },
 });
 
@@ -246,7 +246,7 @@ const ScrollSpyWidget = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                color: 'var(--maximeheckel-colors-typeface-primary)',
+                color: 'var(--haidinhthanh-colors-typeface-primary)',
               }}
             />
           </WidgetRoot>

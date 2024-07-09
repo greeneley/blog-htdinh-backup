@@ -149,7 +149,7 @@ const HSLAShowcase = () => {
                   width: '2px',
                   height: '50%',
                   margin: '0 auto',
-                  backgroundColor: 'var(--maximeheckel-colors-brand)',
+                  backgroundColor: 'var(--haidinhthanh-colors-brand)',
                   transform: 'rotate(180deg)',
                 }}
               />

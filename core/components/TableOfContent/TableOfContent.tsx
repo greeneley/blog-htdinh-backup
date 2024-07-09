@@ -40,7 +40,7 @@ const Wrapper = styled('div', {
       },
 
       '&:focus-visible': {
-        outline: '2px solid var(--maximeheckel-colors-brand)',
+        outline: '2px solid var(--haidinhthanh-colors-brand)',
         opacity: '1 !important',
       },
     },
@@ -112,7 +112,7 @@ const TableOfContent = ({ ids }: TableOfContentProps) => {
     const offsetPosition = elementPosition - 100;
 
     /**
-     * Note @MaximeHeckel: This doesn't work on Safari :(
+     * Note @haidinhthanh: This doesn't work on Safari :(
      * TODO: find an alternative for Safari
      */
     window.scrollTo({
@@ -147,7 +147,7 @@ const TableOfContent = ({ ids }: TableOfContentProps) => {
                   currentActiveIndex === index
                     ? {
                         a: {
-                          color: 'var(--maximeheckel-colors-brand)!important',
+                          color: 'var(--haidinhthanh-colors-brand)!important',
                         },
                       }
                     : {}

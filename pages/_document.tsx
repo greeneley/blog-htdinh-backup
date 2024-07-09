@@ -87,11 +87,11 @@ class MyDocument extends Document {
           <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
           <link
             rel="webmention"
-            href="https://webmention.io/blog.maximeheckel.com/webmention"
+            href="https://webmention.io/blog.haidinhthanh.com/webmention"
           />
           <link
             rel="pingback"
-            href="https://webmention.io/blog.maximeheckel.com/xmlrpc"
+            href="https://webmention.io/blog.haidinhthanh.com/xmlrpc"
           />
           <style
             id="stitches"
@@ -100,17 +100,17 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         </Head>
-        <body className="maximeheckel-light">
+        <body className="haidinhthanh-light">
           <Script src="/sw.js"></Script>
           <script
-            key="maximeheckel-theme"
+            key="haidinhthanh-theme"
             dangerouslySetInnerHTML={{
               __html: `(function() { try {
         var mode = localStorage.getItem('mode');
         var supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
-        if (!mode && supportDarkMode)  document.body.classList.add('maximeheckel-dark');
+        if (!mode && supportDarkMode)  document.body.classList.add('haidinhthanh-dark');
         if (!mode) return
-        document.body.classList.add('maximeheckel-' + mode);
+        document.body.classList.add('haidinhthanh-' + mode);
       } catch (e) {} })();`,
             }}
           />

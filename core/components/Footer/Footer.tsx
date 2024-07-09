@@ -2,7 +2,7 @@ import { EM, Flex, Grid, styled, Text } from '@dinh/design-system';
 import Logo from '@theme/components/Logo';
 
 const FooterBlock = styled('footer', {
-  background: 'var(--maximeheckel-colors-body)',
+  background: 'var(--haidinhthanh-colors-body)',
   paddingTop: 'var(--space-8)',
   transition: '0.5s',
   width: '100%',
@@ -10,7 +10,7 @@ const FooterBlock = styled('footer', {
   hr: {
     height: '1px',
     width: '100%',
-    background: 'var(--maximeheckel-border-color)',
+    background: 'var(--haidinhthanh-border-color)',
     border: 'none',
   },
 });

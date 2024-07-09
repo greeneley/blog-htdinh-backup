@@ -1,14 +1,14 @@
 import { css, Shadows, styled } from '@dinh/design-system';
 
 export const TweetWrapper = styled('div', {
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   borderRadius: 'var(--border-radius-2)',
-  backgroundColor: 'var(--maximeheckel-card-background-color)',
+  backgroundColor: 'var(--haidinhthanh-card-background-color)',
   padding: '1rem 1.5rem',
   marginBottom: '2rem',
   width: '100%',
 
-  border: 'solid 1px var(--maximeheckel-border-color)',
+  border: 'solid 1px var(--haidinhthanh-border-color)',
   boxShadow: Shadows[1],
 
   '@media (max-width: 700px)': {
@@ -37,7 +37,7 @@ export const Name = styled('a', {
   display: 'flex',
   flexDirection: 'column',
   marginLeft: '1rem',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   textDecoration: 'none',
 });
 
@@ -59,7 +59,7 @@ export const ActionIcons = styled('a', {
   display: 'flex',
   alignItems: 'center',
   marginRight: '1rem',
-  color: 'var(--maximeheckel-colors-typeface-tertiary)',
+  color: 'var(--haidinhthanh-colors-typeface-tertiary)',
   textDecoration: 'none',
 
   svg: {

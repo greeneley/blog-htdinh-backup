@@ -4,7 +4,7 @@ import Header, { HeaderProps } from '@theme/components/Header';
 import { styled } from '@dinh/design-system';
 
 const Wrapper = styled('main', {
-  background: 'var(--maximeheckel-colors-body)',
+  background: 'var(--haidinhthanh-colors-body)',
   transition: '0.5s',
 
   /**
@@ -18,8 +18,8 @@ const Wrapper = styled('main', {
    * Custom outline
    */
   '&:focus-visible': {
-    outline: '2px solid var(--maximeheckel-colors-brand)',
-    backgroundColor: 'var(--maximeheckel-colors-foreground)',
+    outline: '2px solid var(--haidinhthanh-colors-brand)',
+    backgroundColor: 'var(--haidinhthanh-colors-foreground)',
   },
 });
 

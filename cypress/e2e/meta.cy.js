@@ -9,10 +9,10 @@ describe('SEO: Verify meta tag integrity', () => {
     );
     cy.get('meta[name="twitter:site"]')
       .should('have.attr', 'content')
-      .and('contain', '@MaximeHeckel');
+      .and('contain', '@haidinhthanh');
     cy.get('meta[name="twitter:creator"]')
       .should('have.attr', 'content')
-      .and('contain', '@MaximeHeckel');
+      .and('contain', '@haidinhthanh');
     cy.get('meta[name="twitter:card"]').should(
       'have.attr',
       'content',
@@ -69,10 +69,10 @@ describe('SEO: Verify meta tag integrity', () => {
     );
     cy.get('meta[name="twitter:site"]')
       .should('have.attr', 'content')
-      .and('contain', '@MaximeHeckel');
+      .and('contain', '@haidinhthanh');
     cy.get('meta[name="twitter:creator"]')
       .should('have.attr', 'content')
-      .and('contain', '@MaximeHeckel');
+      .and('contain', '@haidinhthanh');
     cy.get('meta[name="twitter:card"]').should(
       'have.attr',
       'content',

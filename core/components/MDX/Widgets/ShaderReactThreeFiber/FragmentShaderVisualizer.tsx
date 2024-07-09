@@ -222,10 +222,10 @@ const FragmentShaderVisualizer = () => {
             <Box
               as="select"
               css={{
-                border: '1px solid var(--maximeheckel-colors-brand)',
+                border: '1px solid var(--haidinhthanh-colors-brand)',
                 boxShadow: 'none',
-                backgroundColor: 'var(--maximeheckel-colors-emphasis)',
-                color: 'var(--maximeheckel-colors-brand)',
+                backgroundColor: 'var(--haidinhthanh-colors-emphasis)',
+                color: 'var(--haidinhthanh-colors-brand)',
                 height: '30px',
                 borderRadius: 'var(--border-radius-0)',
                 padding: '5px',

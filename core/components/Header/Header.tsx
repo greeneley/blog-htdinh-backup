@@ -59,7 +59,7 @@ const Header = (props: HeaderProps) => {
         variants={headerVariants}
         css={{
           borderColor: reached
-            ? 'var(--maximeheckel-border-color)'
+            ? 'var(--haidinhthanh-border-color)'
             : 'transparent',
         }}
       >

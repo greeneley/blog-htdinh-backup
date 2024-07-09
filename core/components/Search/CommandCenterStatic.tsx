@@ -4,7 +4,7 @@ import { MAX_HEIGHT } from './constants';
 import { Separator, Item, KBD } from './Styles';
 
 const commandCenterStaticWrapper = css({
-  backgroundColor: 'var(--maximeheckel-colors-body)',
+  backgroundColor: 'var(--haidinhthanh-colors-body)',
   maxHeight: `${MAX_HEIGHT}px`,
   overflowY: 'scroll',
 });

@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^1.2.2",
-    "@dinh/design-system": "file:./dinh-design-system-1.1.1.tgz",
+    "@dinh/design-system": "file:./dinh-design-system-1.1.2.tgz",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@swc/helpers": "^0.5.3",
     "@visx/clip-path": "1.6.1",
@@ -114,7 +114,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MaximeHeckel/blog.maximeheckel.com"
+    "url": "https://github.com/haidinhthanh/blog.haidinhthanh.com"
   },
   "jest": {
     "setupFilesAfterEnv": [

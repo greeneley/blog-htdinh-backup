@@ -9,7 +9,7 @@ export const Result = styled(motion.li, {
   listStyle: 'none',
   fontSize: 'var(--font-size-2)',
   lineHeight: '24px',
-  color: 'var(--maximeheckel-colors-typeface-secondary)',
+  color: 'var(--haidinhthanh-colors-typeface-secondary)',
   padding: '10px 25px',
   height: `${HEIGHT}px`,
 
@@ -30,9 +30,9 @@ export const Result = styled(motion.li, {
   variants: {
     selected: {
       true: {
-        backgroundColor: 'var(--maximeheckel-colors-foreground)',
+        backgroundColor: 'var(--haidinhthanh-colors-foreground)',
         a: {
-          color: 'var(--maximeheckel-colors-brand)',
+          color: 'var(--haidinhthanh-colors-brand)',
         },
         '> div': {
           opacity: 1,
@@ -43,7 +43,7 @@ export const Result = styled(motion.li, {
 });
 
 export const SearchResults = styled('ul', {
-  background: 'var(--maximeheckel-colors-body)',
+  background: 'var(--haidinhthanh-colors-body)',
   maxHeight: `${MAX_HEIGHT}px`,
   overflowY: 'scroll',
   margin: '0',
@@ -63,7 +63,7 @@ export const SearchBox = styled(motion.div, {
   transform: 'translateX(-50%)',
   borderRadius: 'var(--border-radius-2)',
   boxShadow: Shadows[3],
-  border: '1px solid var(--maximeheckel-border-color)',
+  border: '1px solid var(--haidinhthanh-border-color)',
 
   '@media (max-width: 700px)': {
     width: '100%',
@@ -73,7 +73,7 @@ export const SearchBox = styled(motion.div, {
 });
 
 export const FormWrapper = styled('div', {
-  background: 'var(--maximeheckel-colors-body)',
+  background: 'var(--haidinhthanh-colors-body)',
 
   form: {
     margin: '0px',
@@ -81,7 +81,7 @@ export const FormWrapper = styled('div', {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    borderBottom: '1px solid var(--maximeheckel-border-color)',
+    borderBottom: '1px solid var(--haidinhthanh-border-color)',
   },
 
   input: {
@@ -93,18 +93,18 @@ export const FormWrapper = styled('div', {
     padding: '0px 25px',
     width: '100%',
     outline: 'none',
-    color: 'var(--maximeheckel-colors-typeface-primary)',
+    color: 'var(--haidinhthanh-colors-typeface-primary)',
 
     '&::placeholder': {
-      color: 'var(--maximeheckel-colors-typeface-secondary)',
+      color: 'var(--haidinhthanh-colors-typeface-secondary)',
       opacity: '0.54',
     },
     '&::-webkit-input-placeholder': {
-      color: 'var(--maximeheckel-colors-typeface-secondary)',
+      color: 'var(--haidinhthanh-colors-typeface-secondary)',
       opacity: '0.54',
     },
     '&:-ms-input-placeholder': {
-      color: 'var(--maximeheckel-colors-typeface-secondary)',
+      color: 'var(--haidinhthanh-colors-typeface-secondary)',
       opacity: '0.54',
     },
 
@@ -125,7 +125,7 @@ export const FormWrapper = styled('div', {
 
     '&::-webkit-autofill': {
       background: 'transparent',
-      color: 'var(--maximeheckel-colors-typeface-primary)',
+      color: 'var(--haidinhthanh-colors-typeface-primary)',
       fontSize: 'var(--font-size-1)',
     },
   },
@@ -149,7 +149,7 @@ export const KBD = (props: React.HTMLAttributes<HTMLParagraphElement>) => (
       fontFamily: 'var(--font-display)',
       borderRadius: 'var(--border-radius-1)',
       padding: '8px',
-      background: 'var(--maximeheckel-colors-emphasis)',
+      background: 'var(--haidinhthanh-colors-emphasis)',
       '&:not(:last-child)': {
         marginRight: '12px',
       },
@@ -165,7 +165,7 @@ export const Item = styled('li', {
   transition: '0.25s',
   listStyle: 'none',
   fontSize: 'var(--font-size-2)',
-  color: 'var(--maximeheckel-colors-typeface-secondary)',
+  color: 'var(--haidinhthanh-colors-typeface-secondary)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
@@ -182,18 +182,18 @@ export const Item = styled('li', {
   },
 
   '&:hover': {
-    backgroundColor: 'var(--maximeheckel-colors-emphasis)',
+    backgroundColor: 'var(--haidinhthanh-colors-emphasis)',
 
     '&[data-nohover]': {
       backgroundColor: 'inherit',
     },
 
     a: {
-      color: 'var(--maximeheckel-colors-brand)',
+      color: 'var(--haidinhthanh-colors-brand)',
     },
 
     svg: {
-      stroke: 'var(--maximeheckel-colors-brand)',
+      stroke: 'var(--haidinhthanh-colors-brand)',
     },
   },
 });
@@ -202,8 +202,8 @@ export const Separator = styled('li', {
   height: '30px',
   width: '100%',
   fontSize: 'var(--font-size-1)',
-  backgroundColor: 'var(--maximeheckel-colors-foreground)',
-  color: 'var(--maximeheckel-colors-typeface-tertiary)',
+  backgroundColor: 'var(--haidinhthanh-colors-foreground)',
+  color: 'var(--haidinhthanh-colors-typeface-tertiary)',
   fontWeight: '500',
   display: 'flex',
   alignItems: 'center',

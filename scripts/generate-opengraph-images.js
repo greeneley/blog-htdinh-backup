@@ -61,7 +61,7 @@ const ogImageDir = `./public/static/og`;
       };
     }, {});
 
-    const url = `https://og-image-maximeheckel.netlify.app/ogimage?${qs.stringify(
+    const url = `https://og-image-haidinhthanh.netlify.app/ogimage?${qs.stringify(
       filteredParams
     )}`;
 

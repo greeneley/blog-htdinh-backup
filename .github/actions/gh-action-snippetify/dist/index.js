@@ -58920,7 +58920,7 @@ ${codeString}
         ]);
         await git([
           'push',
-          `https://${process.env.GITHUB_ACTOR}:${process.env.GITHUB_TOKEN}@github.com/${username}/blog.maximeheckel.com.git`,
+          `https://${process.env.GITHUB_ACTOR}:${process.env.GITHUB_TOKEN}@github.com/${username}/blog.haidinhthanh.com.git`,
           'main',
         ]);
       };
