@@ -1,0 +1,203 @@
+---
+title: 'React Hook - useRef tham chiếu một đối tượng không làm rendering component'
+subtitle: 
+date: '2024-07-06'
+updated: '2024-07-06'
+categories: []
+keywords:
+  [react]
+slug: use-ref-react
+type: 'blogPost'
+---
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1720534706/Blogs/useRef/images_bgu9ok.jpg)
+
+**Bạn đang gặp khó khăn trong việc quản lý dữ liệu trong component React? Bạn muốn lưu trữ thông tin cần thiết mà không muốn component render lại liên tục, gây ảnh hưởng đến hiệu suất ? Vậy thì useRef chính là giải pháp dành cho bạn**
+
+**useRef** là một hook quen thuộc trong React, giúp bạn ghi nhớ giá trị bất kỳ trong suốt vòng đời của component mà không ảnh hưởng đến việc render. Nó hoạt động như một "hộp bí mật" lưu trữ dữ liệu riêng biệt, tách biệt khỏi state của component.
+
+Trước khi khám phá *useRef*, hãy cùng tìm hiểu về *ref*
+
+## 1. Ref là gì
+
+**Ref** là một tham chiếu (reference) trỏ đến một phần tử DOM cụ thể trong component. Nó đóng vai trò như một cầu nối, giúp bạn tương tác trực tiếp với phần tử DOM đó, thực hiện các thao tác như tập trung, lấy giá trị, thao tác thuộc tính,... mà không cần sử dụng state.
+
+Trong React, chúng ta sử dụng useRef để tạo ref.
+
+Để tạo 1 ref, đơn giản chỉ cần khai báo trong component:
+
+```jsx
+useRef(initialValue)
+```
+
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1720535563/Blogs/useRef/Untitled_r1f8zh.png)
+
+Hook useRef trả về cho component một ref. Và ref này là một plain object chứa **ref.current**. Từ đây, chúng ta có thể lưu trữ bất kỳ giá trị nào vào current.
+
+
+Hook useRef trả về cho component một ref. Và ref này là một plain object chứa ref.current.
+
+Từ đây, chúng ta có thể thêm bất kỳ giá trị nào vào current đều được.
+
+**Sử dụng useRef mang lại nhiều lợi ích:**
+
+- **Lưu trữ giá trị bất kỳ:** useRef có thể lưu trữ bất kỳ kiểu dữ liệu nào, từ primitive types như số, chuỗi đến object phức tạp.
+- **Tạo biến tham chiếu (reference):** useRef có thể tạo ra reference, giúp bạn truy cập trực tiếp đến element DOM hoặc các component con.
+- **Lưu trữ giá trị giữa các lần render:** Việc truy cập và cập nhật giá trị trong useRef không trigger render component, giúp tối ưu hiệu suất; đồng thời giúp ta sử dụng được giá trị trước của state.
+- **Có thể tương tác với DOM node**
+
+## 2. Lưu trữ giá trị bất kỳ
+
+useRef trả về một **ref object** có thuộc tính duy nhất là current. Thuộc tính này có thể lưu trữ bất kỳ loại dữ liệu nào. Không giống như state, `ref.current` là mutable và khi thay đổi giá trị của nó, nó không gây re-render component. Điều này giúp cải thiện hiệu suất, đặc biệt khi bạn chỉ cần thao tác với một phần nhỏ giao diện mà không cần cập nhật toàn bộ component
+
+
+## 3. Tạo biến tham chiếu (reference)
+
+- Đầu tiên, khai báo một **ref object** với giá trị khởi đầu là null
+
+```jsx
+import { useRef } from 'react';
+
+function MyComponent() {
+  const inputRef = useRef(null);
+  // ...
+```
+
+inputRef hiện tại chỉ là một object null và không có ý nghĩa gì cả.
+
+Để inputRef tương tác với một DOM node, chúng ta sẽ truyền inputRef vào thuộc tính ref
+
+```jsx
+return <input ref={inputRef} />;
+```
+
+Bây giờ `inputRef.current` có thể tương tác với thẻ input thông qua các event  như *focus, click, dblclick, blur*…
+
+```jsx
+import { useRef } from 'react';
+
+export default function Form() {
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.focus();
+  }
+
+  return (
+    <>
+      <input ref={inputRef} />
+      <button onClick={handleClick}>
+        Focus the input
+      </button>
+    </>
+  );
+}
+```
+
+Bản thôi tôi làm việc hằng ngày với Hooks cả dự án cá nhân lẫn dự án doanh nghiệp, chúng ta sẽ sử dụng cách dùng này cho một vài use case sau:
+
+- *Thêm và xoá class cho element:*
+
+Tôi từng phát triển một dự án liên quan đến Content Mangement System (CMS) và may mắn gặp use case liên quan đến các vấn đề về text
+
+***Ví dụ:*** chúng ta có một đoạn text và một button hightlight. Khi click button, đoạn text được hightlight; nếu click thêm lần nữa, đoạn text trở lại bình thường.
+
+
+<VideoPlayer
+  src="https://res.cloudinary.com/anhchangtoanhoc97/video/upload/v1720535570/Blogs/useRef/React_App_-_Google_Chrome_2024-02-14_00-45-42_zbbiwh.mp4"
+  autoPlay
+  muted
+  loop
+  controls={true}
+  width={700}
+  height={445}
+/>
+
+```jsx
+function App() {
+  const elementRef = useRef();
+  
+  function handleClick() {
+      if (elementRef.current.classList.contains("active")) {
+          elementRef.current.classList.remove("active");
+      } else {
+          elementRef.current.classList.add("active")
+      }
+  }
+  return (
+      <>
+          <div ref={elementRef}>This is an text</div>
+          <button onClick={handleClick}>Toggle Highlight</button>
+      </>
+  );
+}
+```
+
+
+## 4. Lưu trữ giá trị giữa các lần render
+
+useRef cho phép lưu trữ lại giá trị trước đó của state. Điều này làm useRef rất đáng giá khi chúng ta xử lý các tình huống liên quan đến giá trị trước đó.
+
+***Bài toán:*** Bạn có một UI như thế này
+
+![](https://res.cloudinary.com/anhchangtoanhoc97/image/upload/v1720535562/Blogs/useRef/Untitled_1_byypki.png)
+
+Now thể hiện giá trị hiện tại (current state), before thể hiện giá trị trước đó (old state).
+
+- Làm sao khi ta nhấn vào button “Increase count”, now tăng lên 1 đơn vị, before hiển thị giá trị của now trước khi tăng ? 
+
+Các bạn sẽ suy nghĩ phương án: sử dụng 2 state
+
+- Một state dùng cho Now. Ví dụ: const [now, setNow] = useState(1);
+- Một state dùng cho Before. Ví dụ: const [before, setBefore] = useState(0);
+
+Khi thực hiện onClick trên button, chúng ta tiến hành setState cho 2 giá trị trên. Tuy nhiên, phương án này là dư thừa mặc dù nó hoạt động; theo logic, Before chỉ cần nhận giá trị trước đó của Now là được. Nói cách khác, các bạn cần lưu lại giá trị trước của state.
+
+Và để làm điều này, chúng ta sử dụng useRef. Một điều lưu ý là: để phát huy được lợi ích này của useRef, các bạn cần khéo léo kết hợp useRef với useEffect để thực hiện kỹ thuật này
+
+```jsx
+function App() {
+    
+  const [now, setNow] = useState(1);  
+  const previousStateRef = useRef(0);
+  
+  
+  const onIncrementValue = () => {
+      setNow(() => now + 1);
+  }
+  
+  useEffect(() => {
+      // Gán giá trị mới nhất của now state tới ref
+      // Tuy nhiên, việc thay đổi giá trị này không làm re-render lại app
+      // Vì vậy, previousStateRef.current hiển thị giá trị trước đó của state
+      previousStateRef.current = now;
+  }, [now])
+    
+
+  return (
+        <div>
+            <h3>Now: {now}, Before: {previousStateRef.current}</h3>
+            <button onClick={onIncrementValue}>Increment</button>
+        </div>        
+  );
+}
+```
+
+Kết quả chúng ta đạt được:
+
+<VideoPlayer
+  src="https://res.cloudinary.com/anhchangtoanhoc97/video/upload/v1720535567/Blogs/useRef/bandicam_2024-02-14_10-48-38-728_rjsl1z.mp4"
+  autoPlay
+  muted
+  loop
+  controls={true}
+  width={700}
+  height={445}
+/>
+
+## 5. Điều lưu ý khi sử dụng ref với DOM
+
+Khi chúng ta truyền ref trong một component mà component đó trả về các element như là: input, div, …. react sẽ truyền DOM node vào ref
+
+Tuy nhiên, nếu chúng ta truyền ref trong một component khác, ví dụ `<MyInput />`, ref sẽ null.
+
+Lý do là vì: React không cho phép một component truy cập vào DOM node của một component khác theo mặc định. Nếu muốn truy cập, ta cần phải “forward” ref. Lúc này cần sử dụng “forwardRef” trong React và ta cần sửa lại component MyInput cho phép nhận ref từ bên ngoài vào để truy cập DOM của nó.
