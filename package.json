@@ -2,7 +2,7 @@
   "name": "blog.htdinh.com",
   "private": true,
   "description": "htdinh - Blog",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "author": "Dinh <haidinhthanh.vn@gmail.com>",
   "scripts": {
     "analyze": "cross-env ANALYZE=true next build",
