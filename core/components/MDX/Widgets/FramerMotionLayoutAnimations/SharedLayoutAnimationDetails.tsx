@@ -33,7 +33,7 @@ const SharedLayoutAnimationDetails = () => {
                   cursor: 'pointer',
                   '&:focus': { outline: 'none' },
                   '&:focus-visible': {
-                    outline: '1px solid var(--maximeheckel-colors-brand)',
+                    outline: '1px solid var(--haidinhthanh-colors-brand)',
                   },
                 }}
                 onClick={() => setSelected(item)}

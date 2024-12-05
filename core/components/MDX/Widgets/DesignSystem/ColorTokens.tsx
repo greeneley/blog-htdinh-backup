@@ -190,7 +190,7 @@ const ColorGrid = (props) => {
                     height: '40px',
                     borderRadius: '50%',
                     background: `hsl(var(${shade.color}))`,
-                    border: '2px solid var(--maximeheckel-border-color)',
+                    border: '2px solid var(--haidinhthanh-border-color)',
                   }}
                 />
               </Tooltip>
