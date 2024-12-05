@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^1.2.2",
-    "@dinh/design-system": "file:./dinh-design-system-1.1.1.tgz",
+    "@dinh/design-system": "file:./dinh-design-system-1.1.2.tgz",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@swc/helpers": "^0.5.3",
     "@visx/clip-path": "1.6.1",
@@ -93,7 +93,7 @@
     "@types/react-dom": "^18.0.6",
     "@typescript-eslint/eslint-plugin": "4.28.0",
     "@typescript-eslint/parser": "4.28.0",
-    "babel-jest": "28.1.3",
+    "babel-jest": "29.7.0",
     "babel-plugin-transform-dynamic-import": "2.1.0",
     "cross-env": "7.0.3",
     "eslint": "7.29.0",
@@ -114,7 +114,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MaximeHeckel/blog.maximeheckel.com"
+    "url": "https://github.com/haidinhthanh/blog.haidinhthanh.com"
   },
   "jest": {
     "setupFilesAfterEnv": [

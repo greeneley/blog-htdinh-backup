@@ -7,8 +7,8 @@ const NewsletterForm = dynamic(
 );
 
 const ColoredBlockWrapper = styled('div', {
-  background: 'var(--maximeheckel-colors-emphasis)',
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  background: 'var(--haidinhthanh-colors-emphasis)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   paddingBottom: '50px',
   paddingTop: '50px',
   width: '100%',
@@ -35,7 +35,7 @@ const Signature = ({ title, url }: { title: string; url: string }) => {
           privately? Don&rsquo;t hesitate to shoot me a DM on{' '}
           <Anchor
             favicon
-            href="http://twitter.com/MaximeHeckel"
+            href="http://twitter.com/haidinhthanh"
             target="_blank"
             rel="noopener noreferrer"
           >

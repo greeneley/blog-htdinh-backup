@@ -17,7 +17,7 @@ interface Props {
 const contentClass = css({
   padding: 'var(--space-5) 0px',
   gridColumn: '2',
-  color: 'var(--maximeheckel-colors-typeface-secondary)',
+  color: 'var(--haidinhthanh-colors-typeface-secondary)',
 
   h3: {
     marginTop: '2em',
