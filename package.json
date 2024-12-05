@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@codesandbox/sandpack-react": "^1.2.2",
-    "@dinh/design-system": "file:./dinh-design-system-1.1.1.tgz",
+    "@dinh/design-system": "file:./dinh-design-system-1.1.2.tgz",
     "@nextui-org/react": "^1.0.0-beta.12",
     "@swc/helpers": "^0.5.3",
     "@visx/clip-path": "1.6.1",
@@ -49,7 +49,7 @@
     "focus-trap-react": "8.3.2",
     "framer-motion": "7.0.0",
     "globby": "11.0.2",
-    "graphql": "15.4.0",
+    "graphql": "16.9.0",
     "graphql-request": "3.3.0",
     "gray-matter": "4.0.2",
     "lodash.merge": "4.6.2",
@@ -114,7 +114,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/MaximeHeckel/blog.maximeheckel.com"
+    "url": "https://github.com/haidinhthanh/blog.haidinhthanh.com"
   },
   "jest": {
     "setupFilesAfterEnv": [

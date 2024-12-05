@@ -291,11 +291,11 @@ const Search = (props: Props) => {
                         marginLeft: 'var(--space-4)',
                         height: '35px',
                         width: '35px',
-                        backgroundColor: 'var(--maximeheckel-colors-emphasis)',
+                        backgroundColor: 'var(--haidinhthanh-colors-emphasis)',
                         borderRadius: 'var(--border-radius-1)',
 
                         path: {
-                          stroke: 'var(--maximeheckel-colors-brand)',
+                          stroke: 'var(--haidinhthanh-colors-brand)',
                         },
                       }}
                     >
