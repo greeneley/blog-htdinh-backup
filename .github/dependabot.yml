@@ -16,5 +16,5 @@ updates:
       prefix-development: 'chore: '
     rebase-strategy: 'disabled'
     reviewers:
-      - 'MaximeHeckel'
+      - 'haidinhthanh'
     open-pull-requests-limit: 10

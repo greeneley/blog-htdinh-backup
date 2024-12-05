@@ -18,7 +18,7 @@ const Head = styled(motion.li, {
   marginBottom: 'calc(1.45rem / 2)',
   img: {
     borderRadius: '50%',
-    border: '3px solid var(--maximeheckel-colors-brand)',
+    border: '3px solid var(--haidinhthanh-colors-brand)',
   },
 });
 
