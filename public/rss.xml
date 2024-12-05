@@ -9,23 +9,45 @@
             <link>https://htdinh.netlify.app/</link>
         </image>
         <generator>RSS for Node</generator>
-        <lastBuildDate>Sat, 11 Mar 2023 02:49:35 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Jul 2024 14:45:40 GMT</lastBuildDate>
         <atom:link href="https://htdinh.netlify.app/rss.xml" rel="self" type="application/rss+xml"/>
         <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[React Hook - useRef tham chiếu một đối tượng không làm rendering component]]></title>
+            <link>https://htdinh.netlify.app/posts/use-ref-react</link>
+            <guid isPermaLink="false">https://htdinh.netlify.app/posts/use-ref-react</guid>
+            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <pubDate>Sat, 06 Jul 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Sleep sort: Thuật toán sắp xếp ngủ]]></title>
+            <link>https://htdinh.netlify.app/posts/sleep-sort</link>
+            <guid isPermaLink="false">https://htdinh.netlify.app/posts/sleep-sort</guid>
+            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <pubDate>Thu, 06 Jun 2024 00:00:00 GMT</pubDate>
+        </item>
+        <item>
+            <title><![CDATA[Git commit: Một vài kinh nghiệm để xử lý]]></title>
+            <description><![CDATA[Một vài kinh nghiệm để xử lý các vấn đề về git commit]]></description>
+            <link>https://htdinh.netlify.app/posts/git-commit</link>
+            <guid isPermaLink="false">https://htdinh.netlify.app/posts/git-commit</guid>
+            <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
+            <pubDate>Sun, 22 Oct 2023 00:00:00 GMT</pubDate>
+        </item>
         <item>
             <title><![CDATA[Top useful tools for Frontend]]></title>
             <description><![CDATA[A list of the most popular tools for Frontend developer]]></description>
             <link>https://htdinh.netlify.app/posts/tool-front-end</link>
             <guid isPermaLink="false">https://htdinh.netlify.app/posts/tool-front-end</guid>
             <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Fri, 10 Mar 2023 01:00:00 GMT</pubDate>
+            <pubDate>Fri, 10 Mar 2023 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Lazy Loading in images with React JS]]></title>
             <link>https://htdinh.netlify.app/posts/Lazy-Loading-in-images-with-React-JS</link>
             <guid isPermaLink="false">https://htdinh.netlify.app/posts/Lazy-Loading-in-images-with-React-JS</guid>
             <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Wed, 26 Oct 2022 03:33:00 GMT</pubDate>
+            <pubDate>Wed, 26 Oct 2022 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Install CUDA on Ubuntu 18.04]]></title>
@@ -33,7 +55,7 @@
             <link>https://htdinh.netlify.app/posts/Install-cuda-on-Ubuntu-18.04</link>
             <guid isPermaLink="false">https://htdinh.netlify.app/posts/Install-cuda-on-Ubuntu-18.04</guid>
             <dc:creator><![CDATA[Maxime heckel]]></dc:creator>
-            <pubDate>Mon, 22 Mar 2021 03:33:00 GMT</pubDate>
+            <pubDate>Mon, 22 Mar 2021 00:00:00 GMT</pubDate>
         </item>
         <item>
             <title><![CDATA[Card with glow effect on hover]]></title>
