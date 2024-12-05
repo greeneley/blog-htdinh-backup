@@ -12,7 +12,7 @@ const HeroInfo = styled('div', {
 });
 
 const HeroSubtitle = styled('h3', {
-  color: 'var(--maximeheckel-colors-typeface-tertiary)',
+  color: 'var(--haidinhthanh-colors-typeface-tertiary)',
 });
 
 const HeroTitle = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -25,7 +25,7 @@ const HeroTitle = (props: React.HTMLAttributes<HTMLHeadingElement>) => (
 );
 
 const HeroWrapper = styled('div', {
-  color: 'var(--maximeheckel-colors-typeface-primary)',
+  color: 'var(--haidinhthanh-colors-typeface-primary)',
   gridColumn: '2',
   // paddingTop: '248px',
 

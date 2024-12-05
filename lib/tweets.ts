@@ -56,7 +56,7 @@ export const getTweets = async (ids: string[]) => {
         author: getAuthorInfo(tweet.author_id),
       };
 
-      // @ts-ignore @MaximeHeckel: somehow media types are conflicting
+      // @ts-ignore @haidinhthanh: somehow media types are conflicting
       allTweets[tweet.id] = tweetWithAuthor;
 
       return allTweets;

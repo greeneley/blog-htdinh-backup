@@ -127,7 +127,7 @@ const IndexPage = (props: Props) => {
                       href={`/posts/${post.slug}/`}
                       style={{
                         textDecoration: 'none',
-                        color: 'var(--maximeheckel-colors-typeface-secondary)',
+                        color: 'var(--haidinhthanh-colors-typeface-secondary)',
                       }}
                     >
                       <div>
@@ -150,7 +150,7 @@ const IndexPage = (props: Props) => {
                             borderRadius: 'var(--border-radius-2)',
                             top: '50%',
                             left: '50%',
-                            background: 'var(--maximeheckel-colors-body)',
+                            background: 'var(--haidinhthanh-colors-body)',
                             transform: 'translateY(-50%) translateX(-50%)',
                             filter: 'blur(20px)',
                             transition: '0.5s',
@@ -299,18 +299,18 @@ const Block = styled(Box, {
   boxShadow: 'none',
   backgroundColor: 'var(--article-block-background-color, "transparent")',
   color:
-    'var(--article-block-color, var(--maximeheckel-colors-typeface-primary))',
+    'var(--article-block-color, var(--haidinhthanh-colors-typeface-primary))',
   transition: 'background-color 0.25s, box-shadow 0.25s, color 0.25s',
 
   '&:focus': {
-    '--article-block-background-color': 'var(--maximeheckel-colors-emphasis)',
-    '--article-block-color': 'var(--maximeheckel-colors-brand)',
+    '--article-block-background-color': 'var(--haidinhthanh-colors-emphasis)',
+    '--article-block-color': 'var(--haidinhthanh-colors-brand)',
   },
 
   '@media (hover: hover) and (pointer: fine)': {
     '&:hover': {
-      '--article-block-background-color': 'var(--maximeheckel-colors-emphasis)',
-      '--article-block-color': 'var(--maximeheckel-colors-brand)',
+      '--article-block-background-color': 'var(--haidinhthanh-colors-emphasis)',
+      '--article-block-color': 'var(--haidinhthanh-colors-brand)',
     },
   },
 
