@@ -18,7 +18,7 @@ const Wrapper = styled('div', {
 
   video: {
     margin: '0 auto',
-    background: 'var(--maximeheckel-colors-emphasis)',
+    background: 'var(--haidinhthanh-colors-emphasis)',
     maxWidth: '100%',
     height: 'auto',
   },

@@ -20,7 +20,7 @@ const Logo = ({ alt, size, dark = false }: LogoProps) =>
       aria-label={alt}
       className={transitionLogo()}
       fill="none"
-      stroke="var(--maximeheckel-colors-typeface-primary)"
+      stroke="var(--haidinhthanh-colors-typeface-primary)"
     >
       <g
         transform="translate(0.000000,500.000000) scale(0.100000,-0.100000)"

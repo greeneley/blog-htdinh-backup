@@ -1,6 +1,6 @@
 ::selection {
-  background-color: var(--maximeheckel-colors-emphasis);
-  color: var(--maximeheckel-colors-brand);
+  background-color: var(--haidinhthanh-colors-emphasis);
+  color: var(--haidinhthanh-colors-brand);
 }
 
 html {
@@ -15,8 +15,8 @@ html {
 }
 
 body {
-  background: var(--maximeheckel-colors-body);
-  color: var(--maximeheckel-colors-typeface-primary);
+  background: var(--haidinhthanh-colors-body);
+  color: var(--haidinhthanh-colors-typeface-primary);
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
   margin: 0;
